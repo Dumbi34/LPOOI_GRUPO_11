@@ -1,0 +1,13 @@
+C:\Users\admin\Desktop\LPOO1\TP1\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\admin\Desktop\LPOO1\TP1\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\admin\Desktop\LPOO1\TP1\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Desktop\LPOO1\TP1\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\admin\Desktop\LPOO1\TP1\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
+D:\MARCOS\Facultad de ingenieria\new 2026\LPOO1\TP1_mm\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
+D:\MARCOS\Facultad de ingenieria\new 2026\LPOO1\TP1_mm\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
+D:\MARCOS\Facultad de ingenieria\new 2026\LPOO1\TP1_mm\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
+D:\MARCOS\Facultad de ingenieria\new 2026\LPOO1\TP1_mm\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
