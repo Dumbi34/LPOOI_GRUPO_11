@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ClaseBase;
+using Vistas.Service;
 
 namespace Vistas
 {
     public partial class FormularioCliente : Form
     {
         Cliente nuevo;
+        ClienteService verificar = new ClienteService();
+
         public FormularioCliente()
         {
             InitializeComponent();
@@ -20,8 +23,8 @@ namespace Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDNI.Text)
-                 || string.IsNullOrEmpty(txtDireccion.Text) || string.IsNullOrEmpty(txtCuitOS.Text) || string.IsNullOrEmpty(txtNroCliente.Text))
+            if (!verificar.ClienteNotNull(txtApellido.Text ,txtNombre.Text ,txtDNI.Text ,txtDireccion.Text ,
+                    txtCuitOS.Text ,txtNroCliente.Text ))
             {
                 MessageBox.Show("Tiene que completar todos los campos!");
             }
