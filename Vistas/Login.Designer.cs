@@ -38,6 +38,7 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.chkVer = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -140,6 +141,21 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
+            // chkVer
+            // 
+            this.chkVer.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkVer.AutoSize = true;
+            this.chkVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(192)))));
+            this.chkVer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.chkVer.ForeColor = System.Drawing.Color.White;
+            this.chkVer.Location = new System.Drawing.Point(457, 203);
+            this.chkVer.Name = "chkVer";
+            this.chkVer.Size = new System.Drawing.Size(36, 23);
+            this.chkVer.TabIndex = 10;
+            this.chkVer.Text = "Ver";
+            this.chkVer.UseVisualStyleBackColor = false;
+            this.chkVer.CheckedChanged += new System.EventHandler(this.chkVer_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -147,6 +163,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(505, 388);
+            this.Controls.Add(this.chkVer);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtContraseña);
@@ -178,5 +195,6 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.CheckBox chkVer;
     }
 }

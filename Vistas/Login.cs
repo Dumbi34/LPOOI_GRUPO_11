@@ -63,5 +63,17 @@ namespace Vistas
         {
             btnIngresar.BackColor = SystemColors.Control ;
         }
+
+        private void chkVer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkVer.Checked)
+            {
+                txtContraseña.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtContraseña.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
