@@ -11,9 +11,10 @@ namespace Vistas
 {
     public partial class Principal : Form
     {
-        public Principal()
+        public Principal(string nameUser)
         {
             InitializeComponent();
+            lblUserActive.Text = nameUser;
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -43,7 +44,14 @@ namespace Vistas
             }
         }
 
-     
-  
+        private void btnSalir_MouseHover(object sender, EventArgs e)
+        {
+            btnSalir.BackColor = Color.Red;
+        }
+
+        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalir.BackColor = SystemColors.Control;
+        }
     }
 }
