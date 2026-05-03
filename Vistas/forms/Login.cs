@@ -76,5 +76,10 @@ namespace Vistas
         {
             btnCancelar.BackColor = SystemColors.Control;
         }
+
+        private void lblBienvenida_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

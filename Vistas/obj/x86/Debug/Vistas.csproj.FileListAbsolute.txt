@@ -41,3 +41,17 @@ C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Login.r
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Principal.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\bin\Debug\Vistas.exe
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioCliente.resources
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioObraSocial.resources
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioProducto.resources
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Login.resources
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.pdb

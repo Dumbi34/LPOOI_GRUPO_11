@@ -48,12 +48,13 @@
             this.lblBienvenida.AutoSize = true;
             this.lblBienvenida.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblBienvenida.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(162, 31);
+            this.lblBienvenida.Location = new System.Drawing.Point(168, 43);
             this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(178, 32);
+            this.lblBienvenida.Size = new System.Drawing.Size(142, 26);
             this.lblBienvenida.TabIndex = 6;
             this.lblBienvenida.Text = "BIENVENIDO";
             this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblBienvenida.Click += new System.EventHandler(this.lblBienvenida_Click);
             // 
             // llbUsuario
             // 
@@ -61,7 +62,7 @@
             this.llbUsuario.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llbUsuario.Location = new System.Drawing.Point(115, 118);
             this.llbUsuario.Name = "llbUsuario";
-            this.llbUsuario.Size = new System.Drawing.Size(107, 32);
+            this.llbUsuario.Size = new System.Drawing.Size(87, 26);
             this.llbUsuario.TabIndex = 5;
             this.llbUsuario.Text = "Usuario:";
             // 
@@ -76,7 +77,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(62, 277);
+            this.btnIngresar.Location = new System.Drawing.Point(71, 241);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(118, 32);
             this.btnIngresar.TabIndex = 2;
@@ -88,7 +89,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(352, 277);
+            this.btnCancelar.Location = new System.Drawing.Point(348, 241);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(117, 32);
             this.btnCancelar.TabIndex = 3;
@@ -102,9 +103,9 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(89, 180);
+            this.lblContraseña.Location = new System.Drawing.Point(99, 186);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(145, 32);
+            this.lblContraseña.Size = new System.Drawing.Size(119, 26);
             this.lblContraseña.TabIndex = 4;
             this.lblContraseña.Text = "Contraseña:";
             // 
@@ -126,9 +127,9 @@
             this.chkVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(192)))));
             this.chkVer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.chkVer.ForeColor = System.Drawing.Color.White;
-            this.chkVer.Location = new System.Drawing.Point(450, 185);
+            this.chkVer.Location = new System.Drawing.Point(457, 186);
             this.chkVer.Name = "chkVer";
-            this.chkVer.Size = new System.Drawing.Size(43, 27);
+            this.chkVer.Size = new System.Drawing.Size(36, 23);
             this.chkVer.TabIndex = 10;
             this.chkVer.Text = "Ver";
             this.chkVer.UseVisualStyleBackColor = false;
@@ -140,7 +141,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(42, 174);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 174);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +154,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 107);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +163,7 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;

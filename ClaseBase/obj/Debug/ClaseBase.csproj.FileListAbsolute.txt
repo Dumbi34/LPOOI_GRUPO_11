@@ -11,3 +11,7 @@ C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
