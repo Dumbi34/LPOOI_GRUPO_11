@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClaseBase.model.Cliente" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAJAAAAAAIAAAAABAAAgAAAAEAAA=</HashCode>
+      <FileName>model\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.model.ObraSocial" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAgAAAAAAAgAAAAAIAAAA=</HashCode>
+      <FileName>model\ObraSocial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.model.Producto" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEEAAAAAAAAABAAAAAAAQAAAAA=</HashCode>
+      <FileName>model\Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.model.Rol" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACA=</HashCode>
+      <FileName>model\Rol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.model.Usuario" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAACEAAAAAAAAAAACCAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>model\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.Properties.Settings" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAQAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.repository.ClienteRepository" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>repository\ClienteRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaseBase.repository.UsuarioRepository" Collapsed="true">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAABABAAAAA=</HashCode>
+      <FileName>repository\UsuarioRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

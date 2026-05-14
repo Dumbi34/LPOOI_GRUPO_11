@@ -13,7 +13,6 @@ namespace Vistas
 {
     public partial class Login : Form
     {
-        UsuarioService usuario = new UsuarioService();
         public Login()
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace Vistas
             string user = txtUsuario.Text;
             string passw = txtContraseña.Text;
 
-            if (usuario.UsuarioExiste(user,passw))
+            if (UsuarioService.UsuarioExiste(user,passw))
             {
                 Principal home = new Principal(user);
                 home.Show();
