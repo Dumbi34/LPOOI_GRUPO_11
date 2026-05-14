@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Vistas.forms;
 
 namespace Vistas
 {
@@ -43,6 +44,12 @@ namespace Vistas
                 Application.Exit();
             }
         }
+        private void btnCrearUser_Click(object sender, EventArgs e)
+        {
+            frmCrearUsuario cu = new frmCrearUsuario();
+            cu.Show();
+        }
+
 
         private void btnSalir_MouseHover(object sender, EventArgs e)
         {

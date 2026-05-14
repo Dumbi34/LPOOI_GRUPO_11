@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using ClaseBase;
+using ClaseBase.model;
+
 
 namespace Vistas
 {

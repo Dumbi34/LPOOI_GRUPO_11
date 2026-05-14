@@ -8,7 +8,7 @@ namespace Vistas
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// El punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
         static void Main()
