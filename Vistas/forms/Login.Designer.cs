@@ -50,11 +50,10 @@
             this.lblBienvenida.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenida.Location = new System.Drawing.Point(168, 43);
             this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(142, 26);
+            this.lblBienvenida.Size = new System.Drawing.Size(178, 32);
             this.lblBienvenida.TabIndex = 6;
             this.lblBienvenida.Text = "BIENVENIDO";
             this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblBienvenida.Click += new System.EventHandler(this.lblBienvenida_Click);
             // 
             // llbUsuario
             // 
@@ -62,7 +61,7 @@
             this.llbUsuario.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llbUsuario.Location = new System.Drawing.Point(115, 118);
             this.llbUsuario.Name = "llbUsuario";
-            this.llbUsuario.Size = new System.Drawing.Size(87, 26);
+            this.llbUsuario.Size = new System.Drawing.Size(107, 32);
             this.llbUsuario.TabIndex = 5;
             this.llbUsuario.Text = "Usuario:";
             // 
@@ -105,7 +104,7 @@
             this.lblContraseña.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.Location = new System.Drawing.Point(99, 186);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(119, 26);
+            this.lblContraseña.Size = new System.Drawing.Size(145, 32);
             this.lblContraseña.TabIndex = 4;
             this.lblContraseña.Text = "Contraseña:";
             // 
@@ -129,7 +128,7 @@
             this.chkVer.ForeColor = System.Drawing.Color.White;
             this.chkVer.Location = new System.Drawing.Point(457, 186);
             this.chkVer.Name = "chkVer";
-            this.chkVer.Size = new System.Drawing.Size(36, 23);
+            this.chkVer.Size = new System.Drawing.Size(43, 27);
             this.chkVer.TabIndex = 10;
             this.chkVer.Text = "Ver";
             this.chkVer.UseVisualStyleBackColor = false;
@@ -163,7 +162,7 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;

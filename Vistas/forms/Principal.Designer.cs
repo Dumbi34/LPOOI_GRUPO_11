@@ -28,25 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gbSistema = new System.Windows.Forms.GroupBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.msRegistrar = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCliente = new System.Windows.Forms.ToolStripTextBox();
-            this.btnProducto = new System.Windows.Forms.ToolStripTextBox();
-            this.btnObraSocial = new System.Windows.Forms.ToolStripTextBox();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCrearUser = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEliminarUser = new System.Windows.Forms.ToolStripMenuItem();
             this.btnConsultaUser = new System.Windows.Forms.ToolStripMenuItem();
             this.btnModificarUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.manuRegistrarCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuOS = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRegistrarOS = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRegistrarProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblUserActive = new System.Windows.Forms.Label();
+            this.pbSalida = new System.Windows.Forms.PictureBox();
             this.pbUser = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.gbSistema.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +65,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(815, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.toolTip1.SetToolTip(this.menuStrip1, "Desea Cerrar Sesion?");
             // 
             // gbSistema
             // 
@@ -74,9 +82,11 @@
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msRegistrar,
-            this.usuariosToolStripMenuItem,
-            this.ventasToolStripMenuItem});
+            this.menuUsuario,
+            this.menuVentas,
+            this.menuCliente,
+            this.menuOS,
+            this.menuProducto});
             this.menuStrip2.Location = new System.Drawing.Point(4, 19);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -84,78 +94,93 @@
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // msRegistrar
+            // menuUsuario
             // 
-            this.msRegistrar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnCliente,
-            this.btnProducto,
-            this.btnObraSocial});
-            this.msRegistrar.Name = "msRegistrar";
-            this.msRegistrar.Size = new System.Drawing.Size(80, 24);
-            this.msRegistrar.Text = "Registrar";
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(100, 27);
-            this.btnCliente.Text = "Cliente";
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-            // 
-            // btnProducto
-            // 
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(100, 27);
-            this.btnProducto.Text = "Producto";
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
-            // 
-            // btnObraSocial
-            // 
-            this.btnObraSocial.Name = "btnObraSocial";
-            this.btnObraSocial.Size = new System.Drawing.Size(100, 27);
-            this.btnObraSocial.Text = "Obra Social";
-            this.btnObraSocial.Click += new System.EventHandler(this.btnObraSocial_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuUsuario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCrearUser,
             this.btnEliminarUser,
             this.btnConsultaUser,
             this.btnModificarUser});
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.menuUsuario.Name = "menuUsuario";
+            this.menuUsuario.Size = new System.Drawing.Size(77, 24);
+            this.menuUsuario.Text = "Usuarios";
             // 
             // btnCrearUser
             // 
             this.btnCrearUser.Name = "btnCrearUser";
-            this.btnCrearUser.Size = new System.Drawing.Size(152, 24);
+            this.btnCrearUser.Size = new System.Drawing.Size(142, 24);
             this.btnCrearUser.Text = "Crear";
             this.btnCrearUser.Click += new System.EventHandler(this.btnCrearUser_Click);
             // 
             // btnEliminarUser
             // 
             this.btnEliminarUser.Name = "btnEliminarUser";
-            this.btnEliminarUser.Size = new System.Drawing.Size(152, 24);
+            this.btnEliminarUser.Size = new System.Drawing.Size(142, 24);
             this.btnEliminarUser.Text = "Eliminar";
+            this.btnEliminarUser.Click += new System.EventHandler(this.btnEliminarUser_Click);
             // 
             // btnConsultaUser
             // 
             this.btnConsultaUser.Name = "btnConsultaUser";
-            this.btnConsultaUser.Size = new System.Drawing.Size(152, 24);
+            this.btnConsultaUser.Size = new System.Drawing.Size(142, 24);
             this.btnConsultaUser.Text = "Consultar";
+            this.btnConsultaUser.Click += new System.EventHandler(this.btnConsultaUser_Click);
             // 
             // btnModificarUser
             // 
             this.btnModificarUser.Name = "btnModificarUser";
-            this.btnModificarUser.Size = new System.Drawing.Size(152, 24);
+            this.btnModificarUser.Size = new System.Drawing.Size(142, 24);
             this.btnModificarUser.Text = "Modificar";
+            this.btnModificarUser.Click += new System.EventHandler(this.btnModificarUser_Click);
             // 
-            // ventasToolStripMenuItem
+            // menuVentas
             // 
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.menuVentas.Name = "menuVentas";
+            this.menuVentas.Size = new System.Drawing.Size(64, 24);
+            this.menuVentas.Text = "Ventas";
+            // 
+            // menuCliente
+            // 
+            this.menuCliente.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manuRegistrarCliente});
+            this.menuCliente.Name = "menuCliente";
+            this.menuCliente.Size = new System.Drawing.Size(67, 24);
+            this.menuCliente.Text = "Cliente";
+            // 
+            // manuRegistrarCliente
+            // 
+            this.manuRegistrarCliente.Name = "manuRegistrarCliente";
+            this.manuRegistrarCliente.Size = new System.Drawing.Size(137, 24);
+            this.manuRegistrarCliente.Text = "Registrar";
+            this.manuRegistrarCliente.Click += new System.EventHandler(this.manuRegistrarCliente_Click);
+            // 
+            // menuOS
+            // 
+            this.menuOS.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuRegistrarOS});
+            this.menuOS.Name = "menuOS";
+            this.menuOS.Size = new System.Drawing.Size(94, 24);
+            this.menuOS.Text = "ObraSocial";
+            // 
+            // menuRegistrarOS
+            // 
+            this.menuRegistrarOS.Name = "menuRegistrarOS";
+            this.menuRegistrarOS.Size = new System.Drawing.Size(137, 24);
+            this.menuRegistrarOS.Text = "Registrar";
+            // 
+            // menuProducto
+            // 
+            this.menuProducto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuRegistrarProducto});
+            this.menuProducto.Name = "menuProducto";
+            this.menuProducto.Size = new System.Drawing.Size(81, 24);
+            this.menuProducto.Text = "Producto";
+            // 
+            // menuRegistrarProducto
+            // 
+            this.menuRegistrarProducto.Name = "menuRegistrarProducto";
+            this.menuRegistrarProducto.Size = new System.Drawing.Size(137, 24);
+            this.menuRegistrarProducto.Text = "Registrar";
             // 
             // btnSalir
             // 
@@ -180,6 +205,18 @@
             this.lblUserActive.TabIndex = 4;
             this.lblUserActive.Text = "user";
             // 
+            // pbSalida
+            // 
+            this.pbSalida.Image = global::Vistas.Properties.Resources.salida;
+            this.pbSalida.Location = new System.Drawing.Point(732, 14);
+            this.pbSalida.Name = "pbSalida";
+            this.pbSalida.Size = new System.Drawing.Size(44, 42);
+            this.pbSalida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSalida.TabIndex = 5;
+            this.pbSalida.TabStop = false;
+            this.toolTip2.SetToolTip(this.pbSalida, "Desea Cerrar Sesion?");
+            this.pbSalida.Click += new System.EventHandler(this.pbSalida_Click);
+            // 
             // pbUser
             // 
             this.pbUser.Image = global::Vistas.Properties.Resources.usuario21;
@@ -196,6 +233,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 482);
+            this.Controls.Add(this.pbSalida);
             this.Controls.Add(this.lblUserActive);
             this.Controls.Add(this.pbUser);
             this.Controls.Add(this.btnSalir);
@@ -206,10 +244,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Principal";
             this.Text = "G11- principal";
+            this.Load += new System.EventHandler(this.Principal_Load_1);
             this.gbSistema.ResumeLayout(false);
             this.gbSistema.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSalida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,18 +261,23 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.GroupBox gbSistema;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem msRegistrar;
-        private System.Windows.Forms.ToolStripTextBox btnCliente;
-        private System.Windows.Forms.ToolStripTextBox btnProducto;
-        private System.Windows.Forms.ToolStripTextBox btnObraSocial;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pbUser;
         private System.Windows.Forms.Label lblUserActive;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuUsuario;
         private System.Windows.Forms.ToolStripMenuItem btnCrearUser;
         private System.Windows.Forms.ToolStripMenuItem btnEliminarUser;
         private System.Windows.Forms.ToolStripMenuItem btnConsultaUser;
         private System.Windows.Forms.ToolStripMenuItem btnModificarUser;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuVentas;
+        private System.Windows.Forms.ToolStripMenuItem menuCliente;
+        private System.Windows.Forms.ToolStripMenuItem menuOS;
+        private System.Windows.Forms.ToolStripMenuItem menuProducto;
+        private System.Windows.Forms.ToolStripMenuItem manuRegistrarCliente;
+        private System.Windows.Forms.ToolStripMenuItem menuRegistrarOS;
+        private System.Windows.Forms.ToolStripMenuItem menuRegistrarProducto;
+        private System.Windows.Forms.PictureBox pbSalida;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using ClaseBase;
-using Vistas.Service;
 
+
+using ClaseBase.service;
 namespace Vistas
 {
     public partial class Login : Form
@@ -23,15 +23,25 @@ namespace Vistas
             string user = txtUsuario.Text;
             string passw = txtContraseña.Text;
 
-            if (UsuarioService.UsuarioExiste(user,passw))
+            if (!string.IsNullOrEmpty(user) && !string.IsNullOrEmpty(passw))
             {
-                Principal home = new Principal(user);
-                home.Show();
+                if (UsuarioService.UserExiste(user, passw))
+                {
+                    Principal home = new Principal(user);
+                    home.Show();
+                    txtUsuario.Text = "";
+                    txtContraseña.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                }
             }
             else
             {
-                MessageBox.Show("Error al ingresar los datos");
+                MessageBox.Show("Debe completar los campos");
             }
+           
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -74,11 +84,6 @@ namespace Vistas
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
             btnCancelar.BackColor = SystemColors.Control;
-        }
-
-        private void lblBienvenida_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

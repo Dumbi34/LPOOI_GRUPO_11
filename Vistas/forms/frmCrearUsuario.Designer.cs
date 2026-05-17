@@ -40,6 +40,8 @@
             this.txtCorreoUser = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -144,11 +146,21 @@
             this.cmbRol.Size = new System.Drawing.Size(185, 24);
             this.cmbRol.TabIndex = 12;
             // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Location = new System.Drawing.Point(455, 47);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.RowTemplate.Height = 24;
+            this.dgvUsuarios.Size = new System.Drawing.Size(408, 229);
+            this.dgvUsuarios.TabIndex = 13;
+            // 
             // frmCrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 372);
+            this.ClientSize = new System.Drawing.Size(887, 360);
+            this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtCorreoUser);
@@ -164,6 +176,7 @@
             this.Name = "frmCrearUsuario";
             this.Text = "Registro ";
             this.Load += new System.EventHandler(this.frmCrearUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +196,6 @@
         private System.Windows.Forms.TextBox txtCorreoUser;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ComboBox cmbRol;
+        private System.Windows.Forms.DataGridView dgvUsuarios;
     }
 }

@@ -64,11 +64,29 @@
     <Compile Include="forms\FormularioProducto.Designer.cs">
       <DependentUpon>FormularioProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\frmConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmConsultarUsuario.designer.cs">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmCrearUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\frmCrearUsuario.Designer.cs">
       <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmEliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmEliminarUsuario.designer.cs">
+      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmModificarUsuario.designer.cs">
+      <DependentUpon>frmModificarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\Login.cs">
       <SubType>Form</SubType>
@@ -84,10 +102,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="service\ClienteService.cs" />
-    <Compile Include="service\ObraSocialService.cs" />
-    <Compile Include="service\ProductoService.cs" />
-    <Compile Include="service\UsuarioService.cs" />
     <EmbeddedResource Include="forms\FormularioCliente.resx">
       <DependentUpon>FormularioCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,8 +111,17 @@
     <EmbeddedResource Include="forms\FormularioProducto.resx">
       <DependentUpon>FormularioProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmConsultarUsuario.resx">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmCrearUsuario.resx">
       <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmEliminarUsuario.resx">
+      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmModificarUsuario.resx">
+      <DependentUpon>frmModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -138,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\25694.ico" />
+    <Content Include="img\salida.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

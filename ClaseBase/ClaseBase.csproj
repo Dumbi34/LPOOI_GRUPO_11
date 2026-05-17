@@ -73,8 +73,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="repository\ClienteRepository.cs" />
-    <Compile Include="repository\UsuarioRepository.cs" />
+    <Compile Include="service\ClienteService.cs" />
+    <Compile Include="service\ObraSocialService.cs" />
+    <Compile Include="service\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -91,7 +92,7 @@
       <DependentUpon>OpticaG11DataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
@@ -136,6 +137,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

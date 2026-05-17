@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Vistas.Service
+namespace ClaseBase.service
 {
-    class ObraSocialService
+    public class ObraSocialService
     {
         public bool ObraSocialNotNull(string cuit, string razonsocial, string direccion, string telefono)
         {
