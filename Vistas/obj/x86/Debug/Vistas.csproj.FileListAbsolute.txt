@@ -78,3 +78,17 @@ C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.f
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmEliminarUsuario.resources
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmConsultarUsuario.resources
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmModificarUsuario.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioCliente.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioObraSocial.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioProducto.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmConsultarUsuario.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmCrearUsuario.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmEliminarUsuario.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Forms.frmListadoVentas.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmModificarUsuario.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Login.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Facu\Documents\Tarea\LPOOI_GRUPO_11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.exe
