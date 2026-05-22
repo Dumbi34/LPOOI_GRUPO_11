@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Vistas.forms;
 
 using ClaseBase.service;
+using Vistas.Forms;
 namespace Vistas
 {
     public partial class Principal : Form
@@ -97,7 +98,7 @@ namespace Vistas
         }
         private void menuVentaLista_Click(object sender, EventArgs e)
         {
-            FrmVentaListado vl = new FrmVentaListado();
+            frmListadoVentas vl = new frmListadoVentas();
             vl.Show();
         }
         //botonos
@@ -128,30 +129,9 @@ namespace Vistas
             }
         }
 
-        private void gbSistema_Enter(object sender, EventArgs e)
+        private void pctSalida_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void menuOS_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuCliente_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void listadoDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmListadoVentas frm = new frmListadoVentas();
-
-            frm.Show();
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

@@ -7,23 +7,17 @@ namespace Vistas.Forms
 {
     public partial class frmListadoVentas : Form
     {
-        VentaService ventaService = new VentaService();
+        //VentaService ventaService = new VentaService();
 
         public frmListadoVentas()
         {
             InitializeComponent();
-
-            this.Load += frmListadoVentas_Load;
         }
 
         private void frmListadoVentas_Load(object sender, EventArgs e)
         {
-            dgvVentas.DataSource = ventaService.ObtenerVentas();
+            dgvVentas.DataSource = VentaService.Listar_Ventas();
         }
 
-        private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

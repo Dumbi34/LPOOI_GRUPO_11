@@ -80,5 +80,5 @@ D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioRegistr
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioEliminar.resources
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioModificar.resources
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmVentaRegistrar.resources
-D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmVentaListado.resources
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.LoginRecuperacionPssw.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Forms.frmListadoVentas.resources

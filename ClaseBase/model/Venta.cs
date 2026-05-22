@@ -7,9 +7,12 @@ namespace ClaseBase.model
 {
     public class Venta
     {
-        public int Id { get; set; }
-        public DateTime Fecha { get; set; }
-        public string ClienteNombre { get; set; }
-        public decimal Total { get; set; }
+        public DateTime ven_Fecha { get; set; }
+        public string cli_dni { get; set; }
+        public Venta(DateTime fecha, string dni)
+        {
+            ven_Fecha = fecha;
+            cli_dni = dni;
+        }
     }
 }

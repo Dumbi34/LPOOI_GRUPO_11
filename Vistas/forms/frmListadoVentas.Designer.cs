@@ -37,23 +37,24 @@
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentas.Location = new System.Drawing.Point(22, 12);
+            this.dgvVentas.Location = new System.Drawing.Point(29, 15);
+            this.dgvVentas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(472, 358);
+            this.dgvVentas.Size = new System.Drawing.Size(629, 441);
             this.dgvVentas.TabIndex = 0;
-            this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellContentClick);
             // 
             // frmListadoVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 393);
+            this.ClientSize = new System.Drawing.Size(695, 484);
             this.Controls.Add(this.dgvVentas);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListadoVentas";
             this.Text = "frmListadoVentas";
-            this.Load += new System.EventHandler(this.frmListadoVentas_Load_1);
+            this.Load += new System.EventHandler(this.frmListadoVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.ResumeLayout(false);
 
