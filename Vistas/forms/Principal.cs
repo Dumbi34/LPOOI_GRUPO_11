@@ -127,5 +127,31 @@ namespace Vistas
                 this.Close();
             }
         }
+
+        private void gbSistema_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuOS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void listadoDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoVentas frm = new frmListadoVentas();
+
+            frm.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
