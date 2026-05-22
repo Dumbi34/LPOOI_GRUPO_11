@@ -60,6 +60,8 @@
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\ObraSocial.cs" />
     <Compile Include="model\Producto.cs" />
+    <Compile Include="model\Venta.cs" />
+    <Compile Include="model\VentaDetalle.cs" />
     <Compile Include="OpticaG11DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,7 +77,10 @@
     </Compile>
     <Compile Include="service\ClienteService.cs" />
     <Compile Include="service\ObraSocialService.cs" />
+    <Compile Include="service\ProductoService.cs" />
     <Compile Include="service\UsuarioService.cs" />
+    <Compile Include="service\VentaDetalleService.cs" />
+    <Compile Include="service\VentaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using ClaseBase.service;
 namespace Vistas.forms
 {
-    public partial class frmModificarUsuario : Form
+    public partial class FrmUsuarioModificar : Form
     {
-        public frmModificarUsuario()
+        public FrmUsuarioModificar()
         {
             InitializeComponent();
         }

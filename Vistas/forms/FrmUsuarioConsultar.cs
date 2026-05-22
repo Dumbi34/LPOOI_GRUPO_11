@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using ClaseBase.service;
 namespace Vistas.forms
 {
-    public partial class frmConsultarUsuario : Form
+    public partial class FrmUsuarioConsultar : Form
     {
-        public frmConsultarUsuario()
+        public FrmUsuarioConsultar()
         {
             InitializeComponent();
         }
@@ -40,11 +40,6 @@ namespace Vistas.forms
             {
                 Load_usuarios();
             }
-        }
-
-        private void dgwConsultaUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

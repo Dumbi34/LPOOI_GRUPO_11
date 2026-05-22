@@ -205,5 +205,76 @@ namespace ClaseBase.service
 
             return esUltimoAdmin;
         }
+        public static bool nombreUsuarioExiste(string user)
+        {
+            bool existe = false;
+            SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+
+            SqlCommand cmd = new SqlCommand(); 
+            cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario = @usuario";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = lus;
+
+            cmd.Parameters.AddWithValue("@usuario", user);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                existe = true;
+            }
+
+            return existe;
+        }
+        public static string obtenerCorreoUsuario(string user)
+        {
+            string correo = "";
+            SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Usu_Correo FROM Usuario WHERE Usu_NombreUsuario = @usuario";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = lus;
+
+            cmd.Parameters.AddWithValue("@usuario", user);
+
+            lus.Open();
+            object resultado = cmd.ExecuteScalar();
+            if (resultado != null && resultado != DBNull.Value)
+            {
+                correo = resultado.ToString();
+            }
+
+            lus.Close();
+
+            return correo;
+        }
+        public static bool actualizarContraseña(string user, string nuevaContraseña)
+        {
+            bool actualizado = false;
+            SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Usuario SET Usu_Contraseña = @password WHERE Usu_NombreUsuario = @usuario";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = lus;
+
+            cmd.Parameters.AddWithValue("@password", nuevaContraseña);
+            cmd.Parameters.AddWithValue("@usuario", user);
+
+            lus.Open();
+
+            int filasAfectadas = cmd.ExecuteNonQuery();
+
+            lus.Close();
+            if (filasAfectadas > 0)
+            {
+                actualizado = true;
+            }
+
+            return actualizado;
+        }
     }
 }

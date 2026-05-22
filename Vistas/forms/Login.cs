@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
+using Vistas.forms;
 using ClaseBase.service;
 namespace Vistas
 {
@@ -84,6 +84,22 @@ namespace Vistas
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
             btnCancelar.BackColor = SystemColors.Control;
+        }
+
+        private void lblRecuperarContraseña_Click(object sender, EventArgs e)
+        {
+            LoginRecuperacionPssw recuperar = new LoginRecuperacionPssw();
+            recuperar.Show();
+        }
+
+        private void lblRecuperarContraseña_MouseHover(object sender, EventArgs e)
+        {
+            lblRecuperarContraseña.BackColor = Color.Aqua;
+        }
+
+        private void lblRecuperarContraseña_MouseLeave(object sender, EventArgs e)
+        {
+            lblRecuperarContraseña.BackColor = SystemColors.ActiveBorder;
         }
     }
 }

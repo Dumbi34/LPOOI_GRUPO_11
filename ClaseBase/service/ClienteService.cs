@@ -105,5 +105,22 @@ namespace ClaseBase.service
                 cmd.ExecuteNonQuery();
             }
         }
+        public static DataTable listar_ClientesNombreCompleto()
+        {
+            SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Cli_DNI, (Cli_Apellido + ', ' + Cli_Nombre) AS NombreCompleto FROM Cliente";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = lus;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

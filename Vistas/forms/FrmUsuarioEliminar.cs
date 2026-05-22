@@ -10,10 +10,10 @@ using System.Windows.Forms;
 using ClaseBase.service;
 namespace Vistas.forms
 {
-    public partial class frmEliminarUsuario : Form
+    public partial class FrmUsuarioEliminar : Form
     {
         string userActivo;
-        public frmEliminarUsuario(string nameUser)
+        public FrmUsuarioEliminar(string nameUser)
         {
             InitializeComponent();
             userActivo = nameUser;

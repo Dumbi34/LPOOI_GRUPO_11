@@ -1,6 +1,6 @@
 ﻿namespace Vistas.forms
 {
-    partial class frmEliminarUsuario
+    partial class FrmUsuarioEliminar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioEliminar));
             this.lblTituloUser = new System.Windows.Forms.Label();
             this.lblEliminarUser = new System.Windows.Forms.Label();
             this.txtEliminarUser = new System.Windows.Forms.TextBox();
@@ -159,7 +160,7 @@
             this.txtRoleliminar.Size = new System.Drawing.Size(147, 22);
             this.txtRoleliminar.TabIndex = 12;
             // 
-            // frmEliminarUsuario
+            // FrmUsuarioEliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,8 +178,9 @@
             this.Controls.Add(this.txtEliminarUser);
             this.Controls.Add(this.lblEliminarUser);
             this.Controls.Add(this.lblTituloUser);
-            this.Name = "frmEliminarUsuario";
-            this.Text = "frmEliminarUsuario";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmUsuarioEliminar";
+            this.Text = "Usuario";
             this.Load += new System.EventHandler(this.frmEliminarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwEliminarUser)).EndInit();
             this.ResumeLayout(false);

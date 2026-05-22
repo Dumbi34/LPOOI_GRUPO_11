@@ -1,6 +1,6 @@
 ﻿namespace Vistas.forms
 {
-    partial class frmModificarUsuario
+    partial class FrmUsuarioModificar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioModificar));
             this.lblModificar = new System.Windows.Forms.Label();
             this.lblNombreUserBuscar = new System.Windows.Forms.Label();
             this.lblDatos = new System.Windows.Forms.Label();
@@ -195,7 +196,7 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // frmModificarUsuario
+            // FrmUsuarioModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,8 +218,9 @@
             this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.lblNombreUserBuscar);
             this.Controls.Add(this.lblModificar);
-            this.Name = "frmModificarUsuario";
-            this.Text = "frmModificarUsuario";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmUsuarioModificar";
+            this.Text = "Usuario";
             this.Load += new System.EventHandler(this.frmModificarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwUserMdf)).EndInit();
             this.ResumeLayout(false);

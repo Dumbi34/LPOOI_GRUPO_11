@@ -37,6 +37,7 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.chkVer = new System.Windows.Forms.CheckBox();
+            this.lblRecuperarContraseña = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -48,7 +49,7 @@
             this.lblBienvenida.AutoSize = true;
             this.lblBienvenida.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblBienvenida.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(168, 43);
+            this.lblBienvenida.Location = new System.Drawing.Point(186, 42);
             this.lblBienvenida.Name = "lblBienvenida";
             this.lblBienvenida.Size = new System.Drawing.Size(178, 32);
             this.lblBienvenida.TabIndex = 6;
@@ -59,7 +60,7 @@
             // 
             this.llbUsuario.AutoSize = true;
             this.llbUsuario.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbUsuario.Location = new System.Drawing.Point(115, 118);
+            this.llbUsuario.Location = new System.Drawing.Point(110, 119);
             this.llbUsuario.Name = "llbUsuario";
             this.llbUsuario.Size = new System.Drawing.Size(107, 32);
             this.llbUsuario.TabIndex = 5;
@@ -76,7 +77,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(71, 241);
+            this.btnIngresar.Location = new System.Drawing.Point(76, 276);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(118, 32);
             this.btnIngresar.TabIndex = 2;
@@ -88,7 +89,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(348, 241);
+            this.btnCancelar.Location = new System.Drawing.Point(349, 276);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(117, 32);
             this.btnCancelar.TabIndex = 3;
@@ -102,7 +103,7 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(99, 186);
+            this.lblContraseña.Location = new System.Drawing.Point(89, 181);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(145, 32);
             this.lblContraseña.TabIndex = 4;
@@ -133,6 +134,19 @@
             this.chkVer.Text = "Ver";
             this.chkVer.UseVisualStyleBackColor = false;
             this.chkVer.CheckedChanged += new System.EventHandler(this.chkVer_CheckedChanged);
+            // 
+            // lblRecuperarContraseña
+            // 
+            this.lblRecuperarContraseña.AutoSize = true;
+            this.lblRecuperarContraseña.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecuperarContraseña.Location = new System.Drawing.Point(92, 230);
+            this.lblRecuperarContraseña.Name = "lblRecuperarContraseña";
+            this.lblRecuperarContraseña.Size = new System.Drawing.Size(195, 17);
+            this.lblRecuperarContraseña.TabIndex = 11;
+            this.lblRecuperarContraseña.Text = "¿Olvido su contraseña? Haga Click\r\n";
+            this.lblRecuperarContraseña.Click += new System.EventHandler(this.lblRecuperarContraseña_Click);
+            this.lblRecuperarContraseña.MouseLeave += new System.EventHandler(this.lblRecuperarContraseña_MouseLeave);
+            this.lblRecuperarContraseña.MouseHover += new System.EventHandler(this.lblRecuperarContraseña_MouseHover);
             // 
             // pictureBox2
             // 
@@ -167,6 +181,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(505, 365);
+            this.Controls.Add(this.lblRecuperarContraseña);
             this.Controls.Add(this.chkVer);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -200,5 +215,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox chkVer;
+        private System.Windows.Forms.Label lblRecuperarContraseña;
     }
 }

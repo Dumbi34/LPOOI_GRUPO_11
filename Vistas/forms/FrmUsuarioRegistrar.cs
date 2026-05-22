@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using ClaseBase.service;
 namespace Vistas.forms
 {
-    public partial class frmCrearUsuario : Form
+    public partial class FrmUsuarioRegistrar : Form
     {
-        public frmCrearUsuario()
+        public FrmUsuarioRegistrar()
         {
             InitializeComponent();
         }

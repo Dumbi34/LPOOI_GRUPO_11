@@ -1,6 +1,6 @@
 ﻿namespace Vistas.forms
 {
-    partial class frmConsultarUsuario
+    partial class FrmUsuarioConsultar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioConsultar));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblNombreBuscar = new System.Windows.Forms.Label();
             this.dgwConsultaUser = new System.Windows.Forms.DataGridView();
@@ -63,7 +63,6 @@
             this.dgwConsultaUser.Name = "dgwConsultaUser";
             this.dgwConsultaUser.Size = new System.Drawing.Size(729, 252);
             this.dgwConsultaUser.TabIndex = 2;
-            this.dgwConsultaUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwConsultaUser_CellContentClick);
             // 
             // txtBuscarUser
             // 
@@ -82,7 +81,7 @@
             this.btnBuscarUser.UseVisualStyleBackColor = true;
             this.btnBuscarUser.Click += new System.EventHandler(this.btnBuscarUser_Click);
             // 
-            // frmConsultarUsuario
+            // FrmUsuarioConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,8 +92,8 @@
             this.Controls.Add(this.lblNombreBuscar);
             this.Controls.Add(this.lblTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmConsultarUsuario";
-            this.Text = "frmConsultaruser";
+            this.Name = "FrmUsuarioConsultar";
+            this.Text = "Usuario";
             this.Load += new System.EventHandler(this.frmConsultaruser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwConsultaUser)).EndInit();
             this.ResumeLayout(false);

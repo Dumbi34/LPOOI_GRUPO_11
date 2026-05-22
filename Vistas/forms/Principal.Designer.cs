@@ -39,18 +39,21 @@
             this.btnConsultaUser = new System.Windows.Forms.ToolStripMenuItem();
             this.btnModificarUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVentaAgregar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVentaLista = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.manuRegistrarCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOS = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRegistrarOS = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRegistrarProducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblUserActive = new System.Windows.Forms.Label();
-            this.pbSalida = new System.Windows.Forms.PictureBox();
-            this.pbUser = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.pbSalida = new System.Windows.Forms.PictureBox();
+            this.pbUser = new System.Windows.Forms.PictureBox();
             this.gbSistema.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSalida)).BeginInit();
@@ -108,36 +111,53 @@
             // btnCrearUser
             // 
             this.btnCrearUser.Name = "btnCrearUser";
-            this.btnCrearUser.Size = new System.Drawing.Size(142, 24);
+            this.btnCrearUser.Size = new System.Drawing.Size(152, 24);
             this.btnCrearUser.Text = "Crear";
             this.btnCrearUser.Click += new System.EventHandler(this.btnCrearUser_Click);
             // 
             // btnEliminarUser
             // 
             this.btnEliminarUser.Name = "btnEliminarUser";
-            this.btnEliminarUser.Size = new System.Drawing.Size(142, 24);
+            this.btnEliminarUser.Size = new System.Drawing.Size(152, 24);
             this.btnEliminarUser.Text = "Eliminar";
             this.btnEliminarUser.Click += new System.EventHandler(this.btnEliminarUser_Click);
             // 
             // btnConsultaUser
             // 
             this.btnConsultaUser.Name = "btnConsultaUser";
-            this.btnConsultaUser.Size = new System.Drawing.Size(142, 24);
+            this.btnConsultaUser.Size = new System.Drawing.Size(152, 24);
             this.btnConsultaUser.Text = "Consultar";
             this.btnConsultaUser.Click += new System.EventHandler(this.btnConsultaUser_Click);
             // 
             // btnModificarUser
             // 
             this.btnModificarUser.Name = "btnModificarUser";
-            this.btnModificarUser.Size = new System.Drawing.Size(142, 24);
+            this.btnModificarUser.Size = new System.Drawing.Size(152, 24);
             this.btnModificarUser.Text = "Modificar";
             this.btnModificarUser.Click += new System.EventHandler(this.btnModificarUser_Click);
             // 
             // menuVentas
             // 
+            this.menuVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuVentaAgregar,
+            this.menuVentaLista});
             this.menuVentas.Name = "menuVentas";
             this.menuVentas.Size = new System.Drawing.Size(64, 24);
             this.menuVentas.Text = "Ventas";
+            // 
+            // menuVentaAgregar
+            // 
+            this.menuVentaAgregar.Name = "menuVentaAgregar";
+            this.menuVentaAgregar.Size = new System.Drawing.Size(152, 24);
+            this.menuVentaAgregar.Text = "Agregar";
+            this.menuVentaAgregar.Click += new System.EventHandler(this.menuVentaAgregar_Click);
+            // 
+            // menuVentaLista
+            // 
+            this.menuVentaLista.Name = "menuVentaLista";
+            this.menuVentaLista.Size = new System.Drawing.Size(152, 24);
+            this.menuVentaLista.Text = "Lista";
+            this.menuVentaLista.Click += new System.EventHandler(this.menuVentaLista_Click);
             // 
             // menuCliente
             // 
@@ -150,8 +170,8 @@
             // manuRegistrarCliente
             // 
             this.manuRegistrarCliente.Name = "manuRegistrarCliente";
-            this.manuRegistrarCliente.Size = new System.Drawing.Size(137, 24);
-            this.manuRegistrarCliente.Text = "Registrar";
+            this.manuRegistrarCliente.Size = new System.Drawing.Size(152, 24);
+            this.manuRegistrarCliente.Text = "Gestion";
             this.manuRegistrarCliente.Click += new System.EventHandler(this.manuRegistrarCliente_Click);
             // 
             // menuOS
@@ -165,13 +185,14 @@
             // menuRegistrarOS
             // 
             this.menuRegistrarOS.Name = "menuRegistrarOS";
-            this.menuRegistrarOS.Size = new System.Drawing.Size(137, 24);
+            this.menuRegistrarOS.Size = new System.Drawing.Size(152, 24);
             this.menuRegistrarOS.Text = "Registrar";
             // 
             // menuProducto
             // 
             this.menuProducto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuRegistrarProducto});
+            this.menuRegistrarProducto,
+            this.consultaToolStripMenuItem});
             this.menuProducto.Name = "menuProducto";
             this.menuProducto.Size = new System.Drawing.Size(81, 24);
             this.menuProducto.Text = "Producto";
@@ -179,8 +200,16 @@
             // menuRegistrarProducto
             // 
             this.menuRegistrarProducto.Name = "menuRegistrarProducto";
-            this.menuRegistrarProducto.Size = new System.Drawing.Size(137, 24);
+            this.menuRegistrarProducto.Size = new System.Drawing.Size(152, 24);
             this.menuRegistrarProducto.Text = "Registrar";
+            this.menuRegistrarProducto.Click += new System.EventHandler(this.menuRegistrarProducto_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
             // btnSalir
             // 
@@ -208,9 +237,9 @@
             // pbSalida
             // 
             this.pbSalida.Image = global::Vistas.Properties.Resources.salida;
-            this.pbSalida.Location = new System.Drawing.Point(732, 14);
+            this.pbSalida.Location = new System.Drawing.Point(751, 14);
             this.pbSalida.Name = "pbSalida";
-            this.pbSalida.Size = new System.Drawing.Size(44, 42);
+            this.pbSalida.Size = new System.Drawing.Size(41, 42);
             this.pbSalida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSalida.TabIndex = 5;
             this.pbSalida.TabStop = false;
@@ -279,5 +308,8 @@
         private System.Windows.Forms.PictureBox pbSalida;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuVentaAgregar;
+        private System.Windows.Forms.ToolStripMenuItem menuVentaLista;
     }
 }

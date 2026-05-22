@@ -1,6 +1,6 @@
 ﻿namespace Vistas.forms
 {
-    partial class frmCrearUsuario
+    partial class FrmUsuarioRegistrar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioRegistrar));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -155,7 +156,7 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(408, 229);
             this.dgvUsuarios.TabIndex = 13;
             // 
-            // frmCrearUsuario
+            // FrmUsuarioRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +174,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitulo);
-            this.Name = "frmCrearUsuario";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmUsuarioRegistrar";
             this.Text = "Registro ";
             this.Load += new System.EventHandler(this.frmCrearUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
