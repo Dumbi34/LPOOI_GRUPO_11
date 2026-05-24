@@ -36,8 +36,7 @@ namespace Vistas.forms
             
             cmbRol.DisplayMember = "Rol_descripcion";
             
-            cmbRol.ValueMember = "Rol_codigo";
-            
+            cmbRol.ValueMember = "Rol_codigo";      
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

@@ -90,6 +90,17 @@ namespace Vistas
             FrmProductoConsulta pc = new FrmProductoConsulta();
             pc.Show();
         }
+        private void menuProductoEliminar_Click(object sender, EventArgs e)
+        {
+            FrmProductoDelMod pm = new FrmProductoDelMod(true);
+            pm.Show();
+        }
+
+        private void menuProductoModificar_Click(object sender, EventArgs e)
+        {
+            FrmProductoDelMod pm = new FrmProductoDelMod(false);
+            pm.Show();
+        }
         //venta
         private void menuVentaAgregar_Click(object sender, EventArgs e)
         {

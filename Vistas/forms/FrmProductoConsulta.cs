@@ -23,18 +23,22 @@ namespace Vistas.forms
         }
         private void productos_load()
         {
-            dgwProductos.DataSource = ProductoService.Listar_Productos();
+            dgwProductos.DataSource = ProductoService.Listar_Productos("");
         }
 
         private void btnBuscarCodigo_Click(object sender, EventArgs e)
         {
-            if (txtBuscarCodigo.Text != "")
+            if (rbtnCategoria.Checked)
             {
-                dgwProductos.DataSource = ProductoService.buscar_producto(txtBuscarCodigo.Text);
+                dgwProductos.DataSource = ProductoService.Listar_Productos("Categoria");
+            }
+            else if (rbtnDescripcion.Checked)
+            {
+                dgwProductos.DataSource = ProductoService.Listar_Productos("Descripcion");
             }
             else
             {
-                productos_load();
+                dgwProductos.DataSource = ProductoService.Listar_Productos("");
             }
         }
     }

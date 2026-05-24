@@ -40,7 +40,7 @@ namespace Vistas.forms
         }
         private void Load_Productos()
         {
-            cbCodigoProductos.DataSource = ProductoService.Listar_Productos();
+            cbCodigoProductos.DataSource = ProductoService.Listar_Productos("");
             cbCodigoProductos.DisplayMember = "Prod_Codigo";
             cbCodigoProductos.ValueMember = "Prod_Precio";
 

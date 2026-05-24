@@ -51,14 +51,16 @@ namespace ClaseBase.service
 
             return existe;
         }
-        public static DataTable Listar_Productos()
+        public static DataTable Listar_Productos(string ordenar)
         {
             SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Producto";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ProductoListarOrden"; 
+            cmd.CommandType = CommandType.StoredProcedure; 
             cmd.Connection = nc;
+
+            cmd.Parameters.AddWithValue("@OrdenarPor", ordenar);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -83,6 +85,38 @@ namespace ClaseBase.service
             da.Fill(dt);
 
             return dt;
+        }
+        public static void EliminarProducto(Producto p)
+        {
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ProductoEliminar";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@Prod_Codigo", p.Prod_Codigo);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+        public static void ActualizarProducto(Producto p)
+        {
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+           
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ProductoActualizar"; 
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@Prod_Codigo", p.Prod_Codigo);
+            cmd.Parameters.AddWithValue("@Prod_Descripcion", p.Prod_Descripcion);
+            cmd.Parameters.AddWithValue("@Prod_Categoria", p.Prod_Categoria);
+            cmd.Parameters.AddWithValue("@Prod_Precio", p.Prod_Precio);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
         }
     }
 }

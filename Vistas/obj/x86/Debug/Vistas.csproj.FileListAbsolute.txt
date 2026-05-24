@@ -82,3 +82,4 @@ D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioModific
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmVentaRegistrar.resources
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.LoginRecuperacionPssw.resources
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Forms.frmListadoVentas.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmProductoDelMod.resources

@@ -51,11 +51,13 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblUserActive = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pctSalida = new System.Windows.Forms.PictureBox();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.pctSalida = new System.Windows.Forms.PictureBox();
             this.pbSalida = new System.Windows.Forms.PictureBox();
             this.pbUser = new System.Windows.Forms.PictureBox();
-            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.menuProductoEliminar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProductoModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.gbSistema.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSalida)).BeginInit();
@@ -188,14 +190,16 @@
             // menuRegistrarOS
             // 
             this.menuRegistrarOS.Name = "menuRegistrarOS";
-            this.menuRegistrarOS.Size = new System.Drawing.Size(137, 24);
+            this.menuRegistrarOS.Size = new System.Drawing.Size(152, 24);
             this.menuRegistrarOS.Text = "Registrar";
             // 
             // menuProducto
             // 
             this.menuProducto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuRegistrarProducto,
-            this.consultaToolStripMenuItem});
+            this.consultaToolStripMenuItem,
+            this.menuProductoEliminar,
+            this.menuProductoModificar});
             this.menuProducto.Name = "menuProducto";
             this.menuProducto.Size = new System.Drawing.Size(81, 24);
             this.menuProducto.Text = "Producto";
@@ -203,14 +207,14 @@
             // menuRegistrarProducto
             // 
             this.menuRegistrarProducto.Name = "menuRegistrarProducto";
-            this.menuRegistrarProducto.Size = new System.Drawing.Size(137, 24);
+            this.menuRegistrarProducto.Size = new System.Drawing.Size(152, 24);
             this.menuRegistrarProducto.Text = "Registrar";
             this.menuRegistrarProducto.Click += new System.EventHandler(this.menuRegistrarProducto_Click);
             // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.consultaToolStripMenuItem.Text = "Consulta";
             this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
@@ -273,6 +277,20 @@
             this.pbUser.TabIndex = 3;
             this.pbUser.TabStop = false;
             // 
+            // menuProductoEliminar
+            // 
+            this.menuProductoEliminar.Name = "menuProductoEliminar";
+            this.menuProductoEliminar.Size = new System.Drawing.Size(152, 24);
+            this.menuProductoEliminar.Text = "Eliminar";
+            this.menuProductoEliminar.Click += new System.EventHandler(this.menuProductoEliminar_Click);
+            // 
+            // menuProductoModificar
+            // 
+            this.menuProductoModificar.Name = "menuProductoModificar";
+            this.menuProductoModificar.Size = new System.Drawing.Size(152, 24);
+            this.menuProductoModificar.Text = "Modificar";
+            this.menuProductoModificar.Click += new System.EventHandler(this.menuProductoModificar_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -331,5 +349,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuVentaLista;
         private System.Windows.Forms.PictureBox pctSalida;
         private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolStripMenuItem menuProductoEliminar;
+        private System.Windows.Forms.ToolStripMenuItem menuProductoModificar;
     }
 }
