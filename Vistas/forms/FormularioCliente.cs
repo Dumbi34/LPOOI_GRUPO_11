@@ -6,14 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Vistas.Service;
-using ClaseBase.model;
 
+
+using ClaseBase.service;
 namespace Vistas
 {
     public partial class FormularioCliente : Form
     {
-        Cliente nuevo;
+
         ClienteService verificar = new ClienteService();
 
         public FormularioCliente()

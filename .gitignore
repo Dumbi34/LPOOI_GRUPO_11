@@ -1,10 +1,9 @@
-[Bb]in/
-[Oo]bj/
-*.suo
-*.user
 # Carpetas de compilación
 bin/
 obj/
+# Archivos de usuario y temporales
+*.suo
+*.user
 # Archivos de base de datos
 *.mdf
 *.ldf
