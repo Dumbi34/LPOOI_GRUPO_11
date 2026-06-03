@@ -2,3 +2,13 @@
 [Oo]bj/
 *.suo
 *.user
+# Carpetas de compilación
+bin/
+obj/
+# Archivos de base de datos
+*.mdf
+*.ldf
+# Ejecutables y librerías
+*.exe
+*.dll
+*.pdb
