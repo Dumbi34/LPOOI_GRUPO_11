@@ -69,6 +69,7 @@
             this.Apellido = new System.Windows.Forms.Label();
             this.Gestion = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.btnListarPorApellido = new System.Windows.Forms.Button();
             this.RegistroyGestion.SuspendLayout();
             this.Registrar_Cliente.SuspendLayout();
             this.btnModificar.SuspendLayout();
@@ -236,6 +237,7 @@
             // 
             // Registrar_Cliente
             // 
+            this.Registrar_Cliente.Controls.Add(this.btnListarPorApellido);
             this.Registrar_Cliente.Controls.Add(this.btnCancelar);
             this.Registrar_Cliente.Controls.Add(this.label1);
             this.Registrar_Cliente.Controls.Add(this.label2);
@@ -507,6 +509,16 @@
             this.dgvClientes.TabIndex = 0;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
+            // btnListarPorApellido
+            // 
+            this.btnListarPorApellido.Location = new System.Drawing.Point(174, 397);
+            this.btnListarPorApellido.Name = "btnListarPorApellido";
+            this.btnListarPorApellido.Size = new System.Drawing.Size(133, 23);
+            this.btnListarPorApellido.TabIndex = 15;
+            this.btnListarPorApellido.Text = "Listar por Apellido";
+            this.btnListarPorApellido.UseVisualStyleBackColor = true;
+            this.btnListarPorApellido.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormularioCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,5 +581,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnListarPorApellido;
     }
 }
