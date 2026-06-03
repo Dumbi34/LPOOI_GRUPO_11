@@ -27,3 +27,11 @@ C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11.mdf
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11_log.LDF
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll.config
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11.mdf
+C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11_log.LDF
+C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache

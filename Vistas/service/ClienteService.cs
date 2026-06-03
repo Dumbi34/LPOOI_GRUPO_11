@@ -24,16 +24,13 @@ namespace Vistas.Service
 
         public DataTable BuscarClientesCombinado(string apellido, string dni)
         {
-            
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
-                
                 string query = "SELECT * FROM Cliente WHERE Cli_Apellido LIKE @ape AND Cli_DNI LIKE @dni";
 
                 SqlCommand cmd = new SqlCommand(query, conexion);
-                
                 cmd.Parameters.AddWithValue("@ape", "%" + apellido + "%");
                 cmd.Parameters.AddWithValue("@dni", "%" + dni + "%");
 
@@ -46,7 +43,7 @@ namespace Vistas.Service
 
         public void InsertarCliente(string dni, string apellido, string nombre, string direccion, string cuitOS, string nroCarnet)
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
@@ -68,7 +65,7 @@ namespace Vistas.Service
 
         public void EliminarCliente(string dni)
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
@@ -84,7 +81,7 @@ namespace Vistas.Service
 
         public void ModificarCliente(string dni, string apellido, string nombre, string direccion, string cuitOS, string nroCarnet)
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
@@ -104,6 +101,23 @@ namespace Vistas.Service
             }
         }
 
+        public DataTable ObtenerClientesOrdenadosPorApellido()
+        {
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
 
-    } 
-} 
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                // Mandamos el SELECT directo saltando el procedimiento viejo con la "S" errónea
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Cliente ORDER BY Cli_Apellido ASC", conexion))
+                {
+                    cmd.CommandType = CommandType.Text;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+    }
+}

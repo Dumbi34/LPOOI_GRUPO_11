@@ -148,5 +148,21 @@ namespace Vistas
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Trae los datos ordenados usando el método q se agrego al servicio
+                DataTable dt = verificar.ObtenerClientesOrdenadosPorApellido();
+
+                // se meten en grilla dgvClientes para que se muestren
+                dgvClientes.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al ordenar los clientes: " + ex.Message);
+            }
+        }
+
     }
 }
