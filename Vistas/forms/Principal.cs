@@ -103,6 +103,12 @@ namespace Vistas
             {
                 this.Close();
             }
+        }
+
+        private void menuVentas_Click(object sender, EventArgs e)
+        {
+            FormularioVentas pantallaVentas = new FormularioVentas();
+            pantallaVentas.ShowDialog();
         }  
     }
 }
