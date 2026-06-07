@@ -32,6 +32,7 @@
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarPorFecha = new System.Windows.Forms.Button();
+            this.lblModificar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +68,23 @@
             this.btnBuscarPorFecha.UseVisualStyleBackColor = true;
             this.btnBuscarPorFecha.Click += new System.EventHandler(this.btnBuscarPorFecha_Click);
             // 
+            // lblModificar
+            // 
+            this.lblModificar.AutoSize = true;
+            this.lblModificar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificar.Location = new System.Drawing.Point(690, 21);
+            this.lblModificar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblModificar.Name = "lblModificar";
+            this.lblModificar.Size = new System.Drawing.Size(155, 18);
+            this.lblModificar.TabIndex = 4;
+            this.lblModificar.Text = "Buscar por fechas";
+            // 
             // FormularioVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 548);
+            this.Controls.Add(this.lblModificar);
             this.Controls.Add(this.btnBuscarPorFecha);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dgvVentas);
@@ -80,6 +93,7 @@
             this.Text = "FormularioVentas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,5 +103,6 @@
         private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Button btnBuscarPorFecha;
+        private System.Windows.Forms.Label lblModificar;
     }
 }

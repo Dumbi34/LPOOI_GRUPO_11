@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,11 +59,11 @@
     <Compile Include="forms\FormularioObraSocial.Designer.cs">
       <DependentUpon>FormularioObraSocial.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\FormularioProducto.cs">
+    <Compile Include="forms\FrmProductoConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\FormularioProducto.Designer.cs">
-      <DependentUpon>FormularioProducto.cs</DependentUpon>
+    <Compile Include="forms\FrmProductoConsulta.Designer.cs">
+      <DependentUpon>FrmProductoConsulta.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\FormularioVentas.cs">
       <SubType>Form</SubType>
@@ -70,35 +71,65 @@
     <Compile Include="forms\FormularioVentas.Designer.cs">
       <DependentUpon>FormularioVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmConsultarUsuario.cs">
+    <Compile Include="forms\FrmProductoDelMod.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmConsultarUsuario.designer.cs">
-      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    <Compile Include="forms\FrmProductoDelMod.Designer.cs">
+      <DependentUpon>FrmProductoDelMod.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmCrearUsuario.cs">
+    <Compile Include="forms\FrmProductoRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmCrearUsuario.Designer.cs">
-      <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    <Compile Include="forms\FrmProductoRegistrar.Designer.cs">
+      <DependentUpon>FrmProductoRegistrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmEliminarUsuario.cs">
+    <Compile Include="forms\FrmUsuarioConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmEliminarUsuario.designer.cs">
-      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
+    <Compile Include="forms\FrmUsuarioConsultar.designer.cs">
+      <DependentUpon>FrmUsuarioConsultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmModificarUsuario.cs">
+    <Compile Include="forms\FrmUsuarioRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmModificarUsuario.designer.cs">
-      <DependentUpon>frmModificarUsuario.cs</DependentUpon>
+    <Compile Include="forms\FrmUsuarioRegistrar.Designer.cs">
+      <DependentUpon>FrmUsuarioRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmUsuarioEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmListadoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmListadoVentas.Designer.cs">
+      <DependentUpon>frmListadoVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmUsuarioEliminar.designer.cs">
+      <DependentUpon>FrmUsuarioEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmUsuarioModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmUsuarioModificar.designer.cs">
+      <DependentUpon>FrmUsuarioModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmVentaRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmVentaRegistrar.designer.cs">
+      <DependentUpon>frmVentaRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\LoginRecuperacionPssw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\LoginRecuperacionPssw.Designer.cs">
+      <DependentUpon>LoginRecuperacionPssw.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\Principal.cs">
       <SubType>Form</SubType>
@@ -114,26 +145,42 @@
     <EmbeddedResource Include="forms\FormularioObraSocial.resx">
       <DependentUpon>FormularioObraSocial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\FormularioProducto.resx">
-      <DependentUpon>FormularioProducto.cs</DependentUpon>
+    <EmbeddedResource Include="forms\FrmProductoConsulta.resx">
+      <DependentUpon>FrmProductoConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FormularioVentas.resx">
       <DependentUpon>FormularioVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmConsultarUsuario.resx">
-      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="forms\FrmProductoDelMod.resx">
+      <DependentUpon>FrmProductoDelMod.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmCrearUsuario.resx">
-      <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="forms\FrmProductoRegistrar.resx">
+      <DependentUpon>FrmProductoRegistrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmEliminarUsuario.resx">
-      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="forms\FrmUsuarioConsultar.resx">
+      <DependentUpon>FrmUsuarioConsultar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmModificarUsuario.resx">
-      <DependentUpon>frmModificarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="forms\FrmUsuarioRegistrar.resx">
+      <DependentUpon>FrmUsuarioRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmUsuarioEliminar.resx">
+      <DependentUpon>FrmUsuarioEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmUsuarioModificar.resx">
+      <DependentUpon>FrmUsuarioModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmVentaConsulta.resx" />
+    <EmbeddedResource Include="forms\frmVentaRegistrar.resx">
+      <DependentUpon>frmVentaRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmListadoVentas.resx">
+      <DependentUpon>frmListadoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\LoginRecuperacionPssw.resx">
+      <DependentUpon>LoginRecuperacionPssw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

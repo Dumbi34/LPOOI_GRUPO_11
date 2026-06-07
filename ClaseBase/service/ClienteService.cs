@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using System.Data;
 using System.Data.SqlClient;
-using ClaseBase.model;
+
 namespace ClaseBase.service
 {
     public class ClienteService
@@ -25,17 +24,13 @@ namespace ClaseBase.service
 
         public DataTable BuscarClientesCombinado(string apellido, string dni)
         {
-
-            //string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-            string cadenaConexion = ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString;
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
-
                 string query = "SELECT * FROM Cliente WHERE Cli_Apellido LIKE @ape AND Cli_DNI LIKE @dni";
 
                 SqlCommand cmd = new SqlCommand(query, conexion);
-
                 cmd.Parameters.AddWithValue("@ape", "%" + apellido + "%");
                 cmd.Parameters.AddWithValue("@dni", "%" + dni + "%");
 
@@ -48,8 +43,8 @@ namespace ClaseBase.service
 
         public void InsertarCliente(string dni, string apellido, string nombre, string direccion, string cuitOS, string nroCarnet)
         {
-            //string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-            string cadenaConexion = ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString;
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 string query = "INSERT INTO Cliente (Cli_DNI, Cli_Apellido, Cli_Nombre, Cli_Direccion, OS_CUIT, Cli_NroCarnet) " +
@@ -70,8 +65,8 @@ namespace ClaseBase.service
 
         public void EliminarCliente(string dni)
         {
-            //string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-            string cadenaConexion = ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString;
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 string query = "DELETE FROM Cliente WHERE Cli_DNI = @dni";
@@ -86,8 +81,8 @@ namespace ClaseBase.service
 
         public void ModificarCliente(string dni, string apellido, string nombre, string direccion, string cuitOS, string nroCarnet)
         {
-            //string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-            string cadenaConexion = ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString;
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 string query = "UPDATE Cliente SET Cli_Apellido = @ape, Cli_Nombre = @nom, Cli_Direccion = @dir, " +
@@ -105,5 +100,36 @@ namespace ClaseBase.service
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public DataTable ObtenerClientesOrdenadosPorApellido()
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Cliente ORDER BY Cli_Apellido ASC";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conexion;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable listar_ClientesNombreCompleto()
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Cli_DNI, Cli_Apellido + ' ' + Cli_Nombre AS NombreCompleto FROM Cliente";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conexion;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
     }
 }

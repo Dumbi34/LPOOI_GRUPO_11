@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Vistas.forms;
 
 using ClaseBase.service;
+using Vistas.Forms;
 namespace Vistas
 {
     public partial class Principal : Form
@@ -53,22 +54,22 @@ namespace Vistas
         //Gestion Usuarios
         private void btnCrearUser_Click(object sender, EventArgs e)
         {
-            frmCrearUsuario cu = new frmCrearUsuario();
+            FrmUsuarioRegistrar cu = new FrmUsuarioRegistrar();
             cu.Show();
         }
         private void btnEliminarUser_Click(object sender, EventArgs e)
         {
-            frmEliminarUsuario eu = new frmEliminarUsuario(lblUserActive.Text);
+            FrmUsuarioEliminar eu = new FrmUsuarioEliminar(lblUserActive.Text);
             eu.Show();
         }
         private void btnConsultaUser_Click(object sender, EventArgs e)
         {
-            frmConsultarUsuario cu = new frmConsultarUsuario();
+            FrmUsuarioConsultar cu = new FrmUsuarioConsultar();
             cu.Show();
         }
         private void btnModificarUser_Click(object sender, EventArgs e)
         {
-            frmModificarUsuario mu = new frmModificarUsuario();
+            FrmUsuarioModificar mu = new FrmUsuarioModificar();
             mu.Show();
         }
         //cliente
@@ -76,6 +77,40 @@ namespace Vistas
         {
             FormularioCliente fc = new FormularioCliente();
             fc.Show();
+        }
+        //producto
+        private void menuRegistrarProducto_Click(object sender, EventArgs e)
+        {
+            FormularioProducto pn = new FormularioProducto();
+            pn.Show();
+        }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProductoConsulta pc = new FrmProductoConsulta();
+            pc.Show();
+        }
+        private void menuProductoEliminar_Click(object sender, EventArgs e)
+        {
+            FrmProductoDelMod pm = new FrmProductoDelMod(true);
+            pm.Show();
+        }
+
+        private void menuProductoModificar_Click(object sender, EventArgs e)
+        {
+            FrmProductoDelMod pm = new FrmProductoDelMod(false);
+            pm.Show();
+        }
+        //venta
+        private void menuVentaAgregar_Click(object sender, EventArgs e)
+        {
+            frmVentaRegistrar nv = new frmVentaRegistrar();
+            nv.Show();
+        }
+        private void menuVentaLista_Click(object sender, EventArgs e)
+        {
+            frmListadoVentas vl = new frmListadoVentas();
+            vl.Show();
         }
         //botonos
         private void btnSalir_MouseHover(object sender, EventArgs e)
@@ -105,10 +140,22 @@ namespace Vistas
             }
         }
 
+
         private void menuVentas_Click(object sender, EventArgs e)
+        {
+            
+        }  
+
+        private void pctSalida_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buscardorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormularioVentas pantallaVentas = new FormularioVentas();
             pantallaVentas.ShowDialog();
-        }  
+        }
+
     }
 }

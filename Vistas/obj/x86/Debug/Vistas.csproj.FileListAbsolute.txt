@@ -62,7 +62,6 @@ D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmEliminarUsuari
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmConsultarUsuario.resources
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmModificarUsuario.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\OpticaG11.mdf
-C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\OpticaG11_log.LDF
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\Vistas.exe
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\Vistas.pdb
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\ClaseBase.dll
@@ -71,10 +70,6 @@ C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.csprojR
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioCliente.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioObraSocial.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioProducto.resources
-C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmConsultarUsuario.resources
-C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmCrearUsuario.resources
-C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmEliminarUsuario.resources
-C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmModificarUsuario.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Login.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Principal.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
@@ -82,3 +77,14 @@ C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.csproj.
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.exe
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.pdb
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioVentas.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmProductoConsulta.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmProductoDelMod.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioConsultar.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioRegistrar.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioEliminar.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioModificar.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmVentaConsulta.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmVentaRegistrar.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Forms.frmListadoVentas.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.LoginRecuperacionPssw.resources
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\OpticaG11_log.ldf

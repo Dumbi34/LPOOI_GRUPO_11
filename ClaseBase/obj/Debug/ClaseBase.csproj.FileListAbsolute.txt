@@ -20,10 +20,10 @@ D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssembly
 D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11.mdf
 D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11_log.LDF
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11.mdf
-C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11_log.LDF
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll.config
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11_log.ldf
