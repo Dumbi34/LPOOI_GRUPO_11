@@ -56,8 +56,8 @@ namespace ClaseBase.service
             SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "ProductoListarOrden"; 
-            cmd.CommandType = CommandType.StoredProcedure; 
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM Producto ORDER BY Prod_Descripcion ASC";
             cmd.Connection = nc;
 
             cmd.Parameters.AddWithValue("@OrdenarPor", ordenar);

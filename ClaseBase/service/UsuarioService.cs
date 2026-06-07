@@ -251,30 +251,29 @@ namespace ClaseBase.service
 
             return correo;
         }
-        public static bool actualizarContraseña(string user, string nuevaContraseña)
+        public static bool actualizarContraseña(string usuario, string nuevaPass)
         {
-            bool actualizado = false;
-            SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Usuario SET Usu_Contraseña = @password WHERE Usu_NombreUsuario = @usuario";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = lus;
-
-            cmd.Parameters.AddWithValue("@password", nuevaContraseña);
-            cmd.Parameters.AddWithValue("@usuario", user);
-
-            lus.Open();
-
-            int filasAfectadas = cmd.ExecuteNonQuery();
-
-            lus.Close();
-            if (filasAfectadas > 0)
+            try
             {
-                actualizado = true;
-            }
+                SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "UPDATE Usuario SET Usu_Contraseña = @Pass WHERE Usu_NombreUsuario = @User";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = conexion;
 
-            return actualizado;
+                cmd.Parameters.AddWithValue("@Pass", nuevaPass);
+                cmd.Parameters.AddWithValue("@User", usuario);
+
+                conexion.Open();
+                int filasAfectadas = cmd.ExecuteNonQuery();
+                conexion.Close();
+
+                return filasAfectadas > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

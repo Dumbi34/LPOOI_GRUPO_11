@@ -1,17 +1,40 @@
-﻿using ClaseBase.model;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-
-
 using System.Data;
 using System.Data.SqlClient;
+using ClaseBase.model;
+
 namespace ClaseBase.service
 {
     public class VentaService
     {
+        public DataTable BuscarVentasPorFechas(DateTime desde, DateTime hasta)
+        {
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                // Con CAST(... AS DATE) obligamos a SQL a mirar solo el día/mes/año e ignorar la hora
+                cmd.CommandText = "SELECT * FROM Venta WHERE CAST(Ven_Fecha AS DATE) BETWEEN CAST(@FechaInicio AS DATE) AND CAST(@FechaFin AS DATE)";
+
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = conexion;
+
+                cmd.Parameters.AddWithValue("@FechaInicio", desde);
+                cmd.Parameters.AddWithValue("@FechaFin", hasta);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        
         /*private string cadenaConexion = @"Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\OpticaG11.mdf;Integrated Security=True;User Instance=True";
 
         public List<Venta> ObtenerVentas()
@@ -51,9 +74,11 @@ namespace ClaseBase.service
 
             return lista;
         }*/
-         public static void insertarVenta(Venta nuevaVenta)
+
+        public static void insertarVenta(Venta nuevaVenta)
         {
-            SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO Venta(Ven_Fecha, Cli_DNI) VALUES(@Fecha, @Dni)";
@@ -64,12 +89,14 @@ namespace ClaseBase.service
 
             nc.Open();
             cmd.ExecuteNonQuery();
-            nc.Close(); 
+            nc.Close();
         }
+
         public static int obtenerUltimaVenta()
         {
             int ultimoNro = 0;
-            SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT MAX(Ven_Nro) FROM Venta";
@@ -85,12 +112,13 @@ namespace ClaseBase.service
             }
 
             nc.Close();
-
             return ultimoNro;
         }
+
         public static DataTable Listar_Ventas()
         {
-            SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT Ven_Nro as 'Nro. Venta', Ven_Fecha as 'Fecha', Cli_DNI as 'DNI Cliente' FROM Venta";
@@ -104,5 +132,5 @@ namespace ClaseBase.service
 
             return dt;
         }
-    }  
+    }
 }

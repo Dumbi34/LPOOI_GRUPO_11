@@ -65,6 +65,12 @@
     <Compile Include="forms\FrmProductoConsulta.Designer.cs">
       <DependentUpon>FrmProductoConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\FormularioVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormularioVentas.Designer.cs">
+      <DependentUpon>FormularioVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\FrmProductoDelMod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     <EmbeddedResource Include="forms\FrmProductoConsulta.resx">
       <DependentUpon>FrmProductoConsulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormularioVentas.resx">
+      <DependentUpon>FormularioVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmProductoDelMod.resx">
       <DependentUpon>FrmProductoDelMod.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +169,7 @@
     <EmbeddedResource Include="forms\FrmUsuarioModificar.resx">
       <DependentUpon>FrmUsuarioModificar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmVentaConsulta.resx" />
     <EmbeddedResource Include="forms\frmVentaRegistrar.resx">
       <DependentUpon>frmVentaRegistrar.cs</DependentUpon>
     </EmbeddedResource>

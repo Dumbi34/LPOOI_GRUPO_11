@@ -76,6 +76,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="service\ClienteService.cs" />
+    <Compile Include="service\Conexion.cs" />
     <Compile Include="service\ObraSocialService.cs" />
     <Compile Include="service\ProductoService.cs" />
     <Compile Include="service\UsuarioService.cs" />
@@ -136,11 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="OpticaG11.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="OpticaG11_log.LDF">
-      <DependentUpon>OpticaG11.mdf</DependentUpon>
+    <Content Include="OpticaG11_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>OpticaG11.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup />

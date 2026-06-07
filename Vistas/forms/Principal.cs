@@ -140,9 +140,22 @@ namespace Vistas
             }
         }
 
+
+        private void menuVentas_Click(object sender, EventArgs e)
+        {
+            
+        }  
+
         private void pctSalida_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void buscardorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioVentas pantallaVentas = new FormularioVentas();
+            pantallaVentas.ShowDialog();
+        }
+
     }
 }

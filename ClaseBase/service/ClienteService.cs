@@ -5,9 +5,9 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Vistas.Service
+namespace ClaseBase.service
 {
-    class ClienteService
+    public class ClienteService
     {
         public bool ClienteNotNull(string apellido, string nombre, string dni, string direccion, string cuitOs, string nroCliente)
         {
@@ -24,7 +24,7 @@ namespace Vistas.Service
 
         public DataTable BuscarClientesCombinado(string apellido, string dni)
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
@@ -81,7 +81,7 @@ namespace Vistas.Service
 
         public void ModificarCliente(string dni, string apellido, string nombre, string direccion, string cuitOS, string nroCarnet)
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
@@ -103,21 +103,33 @@ namespace Vistas.Service
 
         public DataTable ObtenerClientesOrdenadosPorApellido()
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Cliente ORDER BY Cli_Apellido ASC";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conexion;
 
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
-            {
-                // Mandamos el SELECT directo saltando el procedimiento viejo con la "S" errónea
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Cliente ORDER BY Cli_Apellido ASC", conexion))
-                {
-                    cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
 
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
-                }
-            }
+            return dt;
         }
+
+        public static DataTable listar_ClientesNombreCompleto()
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Cli_DNI, Cli_Apellido + ' ' + Cli_Nombre AS NombreCompleto FROM Cliente";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conexion;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
     }
 }
