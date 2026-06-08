@@ -60,7 +60,7 @@ namespace Vistas.forms
         private bool datosNoNull(string user, string contra, string nombreApellido, object rol, string correo)
         {
             if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(contra) || string.IsNullOrEmpty(nombreApellido)
-                || rol==null || string.IsNullOrEmpty(correo))
+                || rol==null)
             {
                 return false;
             }

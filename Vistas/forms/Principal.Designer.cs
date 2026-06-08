@@ -118,28 +118,28 @@
             // btnCrearUser
             // 
             this.btnCrearUser.Name = "btnCrearUser";
-            this.btnCrearUser.Size = new System.Drawing.Size(142, 24);
+            this.btnCrearUser.Size = new System.Drawing.Size(152, 24);
             this.btnCrearUser.Text = "Crear";
             this.btnCrearUser.Click += new System.EventHandler(this.btnCrearUser_Click);
             // 
             // btnEliminarUser
             // 
             this.btnEliminarUser.Name = "btnEliminarUser";
-            this.btnEliminarUser.Size = new System.Drawing.Size(142, 24);
+            this.btnEliminarUser.Size = new System.Drawing.Size(152, 24);
             this.btnEliminarUser.Text = "Eliminar";
             this.btnEliminarUser.Click += new System.EventHandler(this.btnEliminarUser_Click);
             // 
             // btnConsultaUser
             // 
             this.btnConsultaUser.Name = "btnConsultaUser";
-            this.btnConsultaUser.Size = new System.Drawing.Size(142, 24);
+            this.btnConsultaUser.Size = new System.Drawing.Size(152, 24);
             this.btnConsultaUser.Text = "Consultar";
             this.btnConsultaUser.Click += new System.EventHandler(this.btnConsultaUser_Click);
             // 
             // btnModificarUser
             // 
             this.btnModificarUser.Name = "btnModificarUser";
-            this.btnModificarUser.Size = new System.Drawing.Size(142, 24);
+            this.btnModificarUser.Size = new System.Drawing.Size(152, 24);
             this.btnModificarUser.Text = "Modificar";
             this.btnModificarUser.Click += new System.EventHandler(this.btnModificarUser_Click);
             // 
@@ -185,8 +185,8 @@
             // manuRegistrarCliente
             // 
             this.manuRegistrarCliente.Name = "manuRegistrarCliente";
-            this.manuRegistrarCliente.Size = new System.Drawing.Size(137, 24);
-            this.manuRegistrarCliente.Text = "Registrar";
+            this.manuRegistrarCliente.Size = new System.Drawing.Size(152, 24);
+            this.manuRegistrarCliente.Text = "Gestion";
             this.manuRegistrarCliente.Click += new System.EventHandler(this.manuRegistrarCliente_Click);
             // 
             // menuOS
@@ -219,28 +219,28 @@
             // menuRegistrarProducto
             // 
             this.menuRegistrarProducto.Name = "menuRegistrarProducto";
-            this.menuRegistrarProducto.Size = new System.Drawing.Size(142, 24);
+            this.menuRegistrarProducto.Size = new System.Drawing.Size(152, 24);
             this.menuRegistrarProducto.Text = "Registrar";
             this.menuRegistrarProducto.Click += new System.EventHandler(this.menuRegistrarProducto_Click);
             // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.consultaToolStripMenuItem.Text = "Consulta";
             this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
             // menuProductoEliminar
             // 
             this.menuProductoEliminar.Name = "menuProductoEliminar";
-            this.menuProductoEliminar.Size = new System.Drawing.Size(142, 24);
+            this.menuProductoEliminar.Size = new System.Drawing.Size(152, 24);
             this.menuProductoEliminar.Text = "Eliminar";
             this.menuProductoEliminar.Click += new System.EventHandler(this.menuProductoEliminar_Click);
             // 
             // menuProductoModificar
             // 
             this.menuProductoModificar.Name = "menuProductoModificar";
-            this.menuProductoModificar.Size = new System.Drawing.Size(142, 24);
+            this.menuProductoModificar.Size = new System.Drawing.Size(152, 24);
             this.menuProductoModificar.Text = "Modificar";
             this.menuProductoModificar.Click += new System.EventHandler(this.menuProductoModificar_Click);
             // 
@@ -270,7 +270,7 @@
             // menuProductoListado
             // 
             this.menuProductoListado.Name = "menuProductoListado";
-            this.menuProductoListado.Size = new System.Drawing.Size(142, 24);
+            this.menuProductoListado.Size = new System.Drawing.Size(152, 24);
             this.menuProductoListado.Text = "Listados";
             this.menuProductoListado.Click += new System.EventHandler(this.menuProductoListado_Click);
             // 
