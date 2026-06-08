@@ -43,8 +43,8 @@ namespace ClaseBase.service
 
         public void InsertarCliente(string dni, string apellido, string nombre, string direccion, string cuitOS, string nroCarnet)
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-
+            //string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 string query = "INSERT INTO Cliente (Cli_DNI, Cli_Apellido, Cli_Nombre, Cli_Direccion, OS_CUIT, Cli_NroCarnet) " +
@@ -65,8 +65,8 @@ namespace ClaseBase.service
 
         public void EliminarCliente(string dni)
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-
+            //string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Usuario\OneDrive\Documentos\GitHub\LPOOI_GRUPO_11\ClaseBase\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 string query = "DELETE FROM Cliente WHERE Cli_DNI = @dni";
@@ -81,8 +81,8 @@ namespace ClaseBase.service
 
         public void ModificarCliente(string dni, string apellido, string nombre, string direccion, string cuitOS, string nroCarnet)
         {
-            string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-
+            //string cadenaConexion = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\OpticaG11.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 string query = "UPDATE Cliente SET Cli_Apellido = @ape, Cli_Nombre = @nom, Cli_Direccion = @dir, " +
@@ -103,7 +103,9 @@ namespace ClaseBase.service
 
         public DataTable ObtenerClientesOrdenadosPorApellido()
         {
-            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT * FROM Cliente ORDER BY Cli_Apellido ASC";
             cmd.CommandType = CommandType.Text;
@@ -118,7 +120,9 @@ namespace ClaseBase.service
 
         public static DataTable listar_ClientesNombreCompleto()
         {
-            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT Cli_DNI, Cli_Apellido + ' ' + Cli_Nombre AS NombreCompleto FROM Cliente";
             cmd.CommandType = CommandType.Text;

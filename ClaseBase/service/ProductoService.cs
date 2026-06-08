@@ -11,9 +11,11 @@ namespace ClaseBase.service
     public class ProductoService
     {
         public static void insertarProducto(Producto nuevo)
-        {  
-            SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
-
+        {
+  
+            //SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO Producto(Prod_Codigo,Prod_Categoria,Prod_Descripcion, Prod_Precio) values(@Cod,@Cat,@Des,@Pre)";
             cmd.CommandType = CommandType.Text;
@@ -31,7 +33,9 @@ namespace ClaseBase.service
         public static bool codigoRegistrado(string code)
         {
             bool existe = false;
-            SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT * FROM Producto WHERE RTRIM(LTRIM(Prod_Codigo)) = RTRIM(LTRIM(@Cod))";
@@ -53,7 +57,9 @@ namespace ClaseBase.service
         }
         public static DataTable Listar_Productos(string ordenar)
         {
-            SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
@@ -71,12 +77,14 @@ namespace ClaseBase.service
         }
         public static DataTable buscar_producto(string dato)
         {
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT Prod_Codigo as 'Código', Prod_Categoria as 'Categoría', Prod_Descripcion as 'Descripción', Prod_Precio as 'Precio' FROM Producto WHERE Prod_Codigo LIKE @datobuscar";
             cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
+            cmd.Connection = nc;
 
             cmd.Parameters.AddWithValue("@datobuscar", "%" + dato + "%");
 
@@ -88,22 +96,26 @@ namespace ClaseBase.service
         }
         public static void EliminarProducto(Producto p)
         {
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "ProductoEliminar";
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Connection = cnn;
+            cmd.Connection = nc;
             cmd.Parameters.AddWithValue("@Prod_Codigo", p.Prod_Codigo);
 
-            cnn.Open();
+            nc.Open();
             cmd.ExecuteNonQuery();
-            cnn.Close();
+            nc.Close();
         }
         public static void ActualizarProducto(Producto p)
         {
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
-           
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
+            
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "ProductoActualizar"; 
             cmd.CommandType = CommandType.StoredProcedure;
@@ -117,6 +129,47 @@ namespace ClaseBase.service
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
+        }
+        public static DataTable ListarProductoporCliente(string dni)
+        {
+            //SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
+            
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "SELECT * FROM ListadoDeProductosVendidosClientes WHERE Cli_DNI = @dni";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = nc;
+
+            cmd.Parameters.AddWithValue("@dni", dni);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+        public static DataTable ListarProductosPorFechas(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            //SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM ListadoDeProductosVendidosClientes WHERE Ven_Fecha BETWEEN @desde AND @hasta";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = nc;
+
+            cmd.Parameters.AddWithValue("@desde", fechaDesde);
+            cmd.Parameters.AddWithValue("@hasta", fechaHasta);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            return dt;
         }
     }
 }

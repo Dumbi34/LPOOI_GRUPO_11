@@ -41,8 +41,6 @@ namespace Vistas // O el nombre que tenga tu proyecto de interfaces
             {
                 MessageBox.Show("Hubo un error al buscar por fechas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        
+        }     
     }
 }

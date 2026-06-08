@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductoDelMod));
             this.dgwProductos = new System.Windows.Forms.DataGridView();
             this.tbModificar = new System.Windows.Forms.TabPage();
             this.btnGuardarModificar = new System.Windows.Forms.Button();
@@ -317,8 +318,9 @@
             this.Controls.Add(this.lblTituloSecond);
             this.Controls.Add(this.dgwProductos);
             this.Controls.Add(this.tbcGestion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductoDelMod";
-            this.Text = "FrmProductoEliminar";
+            this.Text = "Productos";
             this.Load += new System.EventHandler(this.FrmProductoEliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwProductos)).EndInit();
             this.tbModificar.ResumeLayout(false);

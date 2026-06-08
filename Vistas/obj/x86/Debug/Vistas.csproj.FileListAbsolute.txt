@@ -57,10 +57,6 @@ D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Properties.Resources.re
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\bin\Debug\OpticaG11.mdf
 D:\extras\G11\LPOOI_GRUPO_11\Vistas\bin\Debug\OpticaG11_log.LDF
-D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmCrearUsuario.resources
-D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmEliminarUsuario.resources
-D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmConsultarUsuario.resources
-D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmModificarUsuario.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\OpticaG11.mdf
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\Vistas.exe
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\Vistas.pdb
@@ -88,3 +84,14 @@ C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.f
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Forms.frmListadoVentas.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.LoginRecuperacionPssw.resources
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\Vistas\bin\Debug\OpticaG11_log.ldf
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmProductoConsulta.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.FormularioVentas.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmProductoDelMod.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioConsultar.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioRegistrar.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioEliminar.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmUsuarioModificar.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.frmVentaRegistrar.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.Forms.frmListadoVentas.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.LoginRecuperacionPssw.resources
+D:\extras\G11\LPOOI_GRUPO_11\Vistas\obj\x86\Debug\Vistas.forms.FrmProductoListados.resources

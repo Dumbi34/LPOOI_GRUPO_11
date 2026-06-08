@@ -13,7 +13,9 @@ namespace ClaseBase.service
         public static bool UserExiste(string user, string psswd)
         {
             bool existe = false;
-            SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection lus = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario = @usuario AND Usu_Contraseña = @password";
@@ -37,13 +39,15 @@ namespace ClaseBase.service
 
         public static DataTable Listar_Roles()
         {
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
 
             cmd.CommandText = "SELECT * FROM roles";
             cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
+            cmd.Connection = nc;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -56,8 +60,9 @@ namespace ClaseBase.service
         public static void InsertarUsuario(string nombreU, string contraU, string nyaU, int rol_id, string correo)
         {
             Usuario nu = new Usuario(nombreU, contraU, nyaU, rol_id, correo);
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
-
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO Usuario(Usu_nombreUsuario,Usu_contraseña,Usu_ApellidoNombre,Rol_Codigo,Usu_Correo) values(@User,@pass,@nombre,@rol,@correo)";
             cmd.CommandType = CommandType.Text;
@@ -75,7 +80,10 @@ namespace ClaseBase.service
         }
         public static DataTable Listar_Usuarios()
         {
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"
@@ -94,7 +102,9 @@ namespace ClaseBase.service
 
         public static DataTable buscar_usuario(string dato)
         {
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT ";
@@ -120,7 +130,9 @@ namespace ClaseBase.service
         }
         public static void EliminarUsuario(string nombreUsuario)
         {
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
 
@@ -137,8 +149,10 @@ namespace ClaseBase.service
         public static void ModificarUsuario(string nombreU, string contraU, string nyaU, int rol_id, string correo)
         {
             Usuario usu = new Usuario(nombreU, contraU, nyaU, rol_id, correo);
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
-
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
+            
             SqlCommand cmd = new SqlCommand();
 
             cmd.CommandText = "UPDATE Usuario SET Usu_contraseña = @pass, Usu_ApellidoNombre = @nombre, Rol_Codigo = @rol, Usu_Correo = @correo WHERE Usu_nombreUsuario = @User";
@@ -160,7 +174,9 @@ namespace ClaseBase.service
         {
             int rol_id = 0;
 
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT Rol_Codigo FROM Usuario WHERE Usu_nombreUsuario = @user";
@@ -186,7 +202,10 @@ namespace ClaseBase.service
         {
             bool esUltimoAdmin = false;
 
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
+
             SqlCommand cmd = new SqlCommand();
 
             cmd.CommandText = "SELECT COUNT(*) FROM Usuario WHERE Rol_Codigo = 1";
@@ -208,7 +227,9 @@ namespace ClaseBase.service
         public static bool nombreUsuarioExiste(string user)
         {
             bool existe = false;
-            SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection lus = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand(); 
             cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario = @usuario";
@@ -231,7 +252,9 @@ namespace ClaseBase.service
         public static string obtenerCorreoUsuario(string user)
         {
             string correo = "";
-            SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection lus = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection lus = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT Usu_Correo FROM Usuario WHERE Usu_NombreUsuario = @usuario";
@@ -255,7 +278,9 @@ namespace ClaseBase.service
         {
             try
             {
-                SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+                //SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+                string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+                SqlConnection conexion = new SqlConnection(cadenaConexion);
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "UPDATE Usuario SET Usu_Contraseña = @Pass WHERE Usu_NombreUsuario = @User";
                 cmd.CommandType = CommandType.Text;

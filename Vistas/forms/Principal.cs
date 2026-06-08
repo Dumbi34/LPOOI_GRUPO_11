@@ -140,12 +140,6 @@ namespace Vistas
             }
         }
 
-
-        private void menuVentas_Click(object sender, EventArgs e)
-        {
-            
-        }  
-
         private void pctSalida_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -155,6 +149,18 @@ namespace Vistas
         {
             FormularioVentas pantallaVentas = new FormularioVentas();
             pantallaVentas.ShowDialog();
+        }
+
+        private void menuProductoListado_Click(object sender, EventArgs e)
+        {
+            FrmProductoListados pv = new FrmProductoListados();
+            pv.Show();
+        }
+
+        private void menuRegistrarOS_Click(object sender, EventArgs e)
+        {
+            FormularioObraSocial os = new FormularioObraSocial();
+            os.Show();
         }
 
     }

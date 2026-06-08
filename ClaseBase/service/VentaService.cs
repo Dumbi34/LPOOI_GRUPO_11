@@ -132,5 +132,23 @@ namespace ClaseBase.service
 
             return dt;
         }
+        public static DataTable Listar_VentasPorCliente(string cli_dni)
+        {
+            //SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM ViewVentasPorClientes WHERE Cli_DNI = @dni";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = nc;
+
+            cmd.Parameters.AddWithValue("@dni", cli_dni);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

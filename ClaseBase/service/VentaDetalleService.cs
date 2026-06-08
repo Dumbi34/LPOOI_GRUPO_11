@@ -12,7 +12,10 @@ namespace ClaseBase.service
     {
         public static void insertarVentaDetalle(VentaDetalle nuevoDetalle)
         {
-            SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            //SqlConnection nc = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection nc = new SqlConnection(cadenaConexion);
+
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO VentaDetalle(Ven_Nro, Prod_Codigo, Det_Precio, Det_Cantidad, Det_Total) VALUES(@VenNro, @ProdCod, @Precio, @Cant, @Total)";
