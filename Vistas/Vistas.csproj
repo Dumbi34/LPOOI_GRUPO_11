@@ -59,6 +59,12 @@
     <Compile Include="forms\FormularioObraSocial.Designer.cs">
       <DependentUpon>FormularioObraSocial.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\FrmObraSocialListados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmObraSocialListados.designer.cs">
+      <DependentUpon>FrmObraSocialListados.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\FrmProductoConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FormularioObraSocial.resx">
       <DependentUpon>FormularioObraSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmObraSocialListados.resx">
+      <DependentUpon>FrmObraSocialListados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmProductoConsulta.resx">
       <DependentUpon>FrmProductoConsulta.cs</DependentUpon>

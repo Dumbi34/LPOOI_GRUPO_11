@@ -171,6 +171,35 @@ namespace ClaseBase.service
 
             return dt;
         }
+        public static int Cantidad_VentasPorFechas(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            int cant;
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "CantidadVentaFecha";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@fecha_desde", fechaDesde);
+            cmd.Parameters.AddWithValue("@fecha_hasta", fechaHasta);
+
+            cmd.Parameters.Add("@cant", SqlDbType.Int);
+            cmd.Parameters["@cant"].Direction = ParameterDirection.Output;
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+
+
+            cant = (int)cmd.Parameters["@cant"].Value;
+
+            return cant;
+        }
     }
 }
       

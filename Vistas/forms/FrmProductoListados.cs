@@ -41,6 +41,7 @@ namespace Vistas.forms
             else
             {
                 dgwListadoProductos.DataSource = ProductoService.ListarProductosPorFechas(dtpFecha1.Value.Date, dtpFecha2.Value.Date);
+                txtCantidadVentas.Text = Convert.ToString(ProductoService.Cantidad_VentasPorFechas(dtpFecha1.Value.Date, dtpFecha2.Value.Date));
             }
         }  
     }

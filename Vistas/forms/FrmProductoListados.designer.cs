@@ -43,6 +43,8 @@
             this.lblFecha1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgwListadoProductos = new System.Windows.Forms.DataGridView();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.txtCantidadVentas = new System.Windows.Forms.TextBox();
             this.tcListado.SuspendLayout();
             this.tbCliente.SuspendLayout();
             this.tbFecha.SuspendLayout();
@@ -56,7 +58,7 @@
             this.tcListado.Location = new System.Drawing.Point(12, 49);
             this.tcListado.Name = "tcListado";
             this.tcListado.SelectedIndex = 0;
-            this.tcListado.Size = new System.Drawing.Size(234, 276);
+            this.tcListado.Size = new System.Drawing.Size(234, 331);
             this.tcListado.TabIndex = 0;
             // 
             // tbCliente
@@ -103,6 +105,8 @@
             // tbFecha
             // 
             this.tbFecha.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tbFecha.Controls.Add(this.txtCantidadVentas);
+            this.tbFecha.Controls.Add(this.lblCantidad);
             this.tbFecha.Controls.Add(this.lblTItuloFecha);
             this.tbFecha.Controls.Add(this.btnBuscarFechas);
             this.tbFecha.Controls.Add(this.dtpFecha2);
@@ -112,7 +116,7 @@
             this.tbFecha.Location = new System.Drawing.Point(4, 25);
             this.tbFecha.Name = "tbFecha";
             this.tbFecha.Padding = new System.Windows.Forms.Padding(3);
-            this.tbFecha.Size = new System.Drawing.Size(226, 247);
+            this.tbFecha.Size = new System.Drawing.Size(226, 302);
             this.tbFecha.TabIndex = 1;
             this.tbFecha.Text = "Fecha";
             // 
@@ -189,6 +193,22 @@
             this.dgwListadoProductos.Size = new System.Drawing.Size(506, 331);
             this.dgwListadoProductos.TabIndex = 2;
             // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(12, 264);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(156, 17);
+            this.lblCantidad.TabIndex = 6;
+            this.lblCantidad.Text = "Cantidad de Productos:";
+            // 
+            // txtCantidadVentas
+            // 
+            this.txtCantidadVentas.Location = new System.Drawing.Point(170, 261);
+            this.txtCantidadVentas.Name = "txtCantidadVentas";
+            this.txtCantidadVentas.Size = new System.Drawing.Size(33, 22);
+            this.txtCantidadVentas.TabIndex = 7;
+            // 
             // FrmProductoListados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -228,5 +248,7 @@
         private System.Windows.Forms.Label lblTituloCliente;
         private System.Windows.Forms.Label lblTItuloFecha;
         private System.Windows.Forms.DateTimePicker dtpFecha1;
+        private System.Windows.Forms.TextBox txtCantidadVentas;
+        private System.Windows.Forms.Label lblCantidad;
     }
 }

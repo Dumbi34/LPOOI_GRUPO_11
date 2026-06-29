@@ -163,5 +163,11 @@ namespace Vistas
             os.Show();
         }
 
+        private void menuOSListados_Click(object sender, EventArgs e)
+        {
+            FrmObraSocialListados osl = new FrmObraSocialListados();
+            osl.Show();
+        }
+
     }
 }

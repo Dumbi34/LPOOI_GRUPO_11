@@ -11,12 +11,6 @@ C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.
 C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Facu\Documents\Github2010\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
-D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll.config
-D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
-D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
-D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
-D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
-D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11.mdf
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll.config
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
@@ -25,3 +19,8 @@ C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.cspro
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
 C:\Users\Mauro\Documents\LPOO\LPOOI_GRUPO_11\ClaseBase\bin\Debug\OpticaG11_log.ldf
+D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll.config
+D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.dll
+D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\bin\Debug\ClaseBase.pdb
+D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.dll
+D:\extras\G11\LPOOI_GRUPO_11\ClaseBase\obj\Debug\ClaseBase.pdb
