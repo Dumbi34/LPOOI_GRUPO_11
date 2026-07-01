@@ -66,7 +66,7 @@ namespace Vistas.forms
 
         private void btnAñadirCarrito_Click(object sender, EventArgs e)
         {
-            if (cbCodigoProductos.SelectedIndex != -1 || verificarCantidad(txtCantidad.Text))
+            if (cbCodigoProductos.SelectedIndex != -1 && verificarCantidad(txtCantidad.Text))
             {
                 decimal precioU = Convert.ToDecimal(cbCodigoProductos.SelectedValue);
                 string codigo = cbCodigoProductos.Text;

@@ -28,7 +28,9 @@ namespace Vistas.forms
         {
             if (cbClientes.SelectedValue != null && cbClientes.SelectedValue.ToString() != "System.Data.DataRowView")
             {
-                dgwListadoProductos.DataSource = ProductoService.ListarProductoporCliente(cbClientes.SelectedValue.ToString());
+                DataTable dtProductos = ProductoService.ListarProductoporCliente(cbClientes.SelectedValue.ToString());
+                dgwListadoProductos.DataSource = dtProductos;
+                lblCantidadProductosCliente.Text = "Cantidad: " + dtProductos.Rows.Count.ToString();
             }
         }
 
@@ -43,6 +45,11 @@ namespace Vistas.forms
                 dgwListadoProductos.DataSource = ProductoService.ListarProductosPorFechas(dtpFecha1.Value.Date, dtpFecha2.Value.Date);
                 txtCantidadVentas.Text = Convert.ToString(ProductoService.Cantidad_VentasPorFechas(dtpFecha1.Value.Date, dtpFecha2.Value.Date));
             }
+        }
+
+        private void lblTituloCliente_Click(object sender, EventArgs e)
+        {
+
         }  
     }
 }
