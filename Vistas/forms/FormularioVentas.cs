@@ -31,7 +31,7 @@ namespace Vistas // O el nombre que tenga tu proyecto de interfaces
 
                 // Llenamos la grilla que renombramos en el Paso 1
                 dgvVentas.DataSource = dtVentas;
-
+                lblCantidadVentas.Text = "Cantidad de ventas: " + dtVentas.Rows.Count.ToString();
                 if (dtVentas.Rows.Count == 0)
                 {
                     MessageBox.Show("No se encontraron ventas registradas en ese rango de fechas.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -41,6 +41,11 @@ namespace Vistas // O el nombre que tenga tu proyecto de interfaces
             {
                 MessageBox.Show("Hubo un error al buscar por fechas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lblCantidadVentas_Click(object sender, EventArgs e)
+        {
+
         }     
     }
 }
