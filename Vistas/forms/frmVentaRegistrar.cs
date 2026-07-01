@@ -129,5 +129,19 @@ namespace Vistas.forms
             txtPrecioTotal.Text = Convert.ToString(precioTotal);
         }
 
+        private void buscarclientebc_Click(object sender, EventArgs e)
+        {
+            FrmBuscarCliente buscador = new FrmBuscarCliente();
+
+            if (buscador.ShowDialog() == DialogResult.OK)
+            {
+                
+                string dniElegido = buscador.Tag.ToString();
+
+               
+                cbClientes.SelectedValue = dniElegido;
+            }
+        }
+
     }
 }

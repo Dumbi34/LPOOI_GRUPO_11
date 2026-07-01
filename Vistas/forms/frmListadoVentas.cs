@@ -7,7 +7,7 @@ namespace Vistas.Forms
 {
     public partial class frmListadoVentas : Form
     {
-        //VentaService ventaService = new VentaService();
+      
 
         public frmListadoVentas()
         {
@@ -32,6 +32,36 @@ namespace Vistas.Forms
         private void frmListadoVentas_Load(object sender, EventArgs e)
         {
             Load_Clientes();
+        }
+
+        private void btnEliminarVenta_Click(object sender, EventArgs e)
+        {
+            
+            if (dgvVentas.CurrentRow != null)
+            {
+                
+                DialogResult confirmacion = MessageBox.Show("¿Está seguro de eliminar esta venta?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+
+                    int nroVenta = Convert.ToInt32(dgvVentas.CurrentRow.Cells["Nro. Venta"].Value);
+
+                   
+                    if (VentaService.EliminarVenta(nroVenta))
+                    {
+                        
+                        MessageBox.Show("La venta ha sido eliminada exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                       
+                        dgvVentas.DataSource = VentaService.Listar_VentasPorCliente(cmbClientes.SelectedValue.ToString());
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una venta de la lista.");
+            }
         }
       
     }
