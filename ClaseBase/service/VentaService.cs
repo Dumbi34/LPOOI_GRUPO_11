@@ -139,7 +139,7 @@ namespace ClaseBase.service
             SqlConnection nc = new SqlConnection(cadenaConexion);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM ViewVentasPorClientes WHERE Cli_DNI = @dni";
+            cmd.CommandText = "SELECT Ven_Nro as 'Nro. Venta', Ven_Fecha as 'Fecha', Cli_DNI as 'DNI Cliente' FROM Venta WHERE Cli_DNI = @dni";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = nc;
 
@@ -150,5 +150,21 @@ namespace ClaseBase.service
             da.Fill(dt);
             return dt;
         }
+
+        public static bool EliminarVenta(int nroVenta)
+        {
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                string consulta = "DELETE FROM Venta WHERE Ven_Nro = @Nro";
+                SqlCommand cmd = new SqlCommand(consulta, conexion);
+                cmd.Parameters.AddWithValue("@Nro", nroVenta);
+
+                conexion.Open();
+                int filasAfectadas = cmd.ExecuteNonQuery();
+                return filasAfectadas > 0;
+            }
+        }
+
     }
 }

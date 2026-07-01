@@ -135,5 +135,36 @@ namespace ClaseBase.service
             return dt;
         }
 
+        public static DataTable BuscarClientesDinamico(string textoBusqueda, string criterio, string orden)
+        {
+            // Usamos tu conexión universal que arreglamos antes
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                // 1. Decidimos en qué columna buscar
+                string columnaFiltro = "Cli_Apellido"; // Por defecto
+                if (criterio == "DNI") columnaFiltro = "Cli_DNI";
+                else if (criterio == "Nombre") columnaFiltro = "Cli_Nombre";
+
+                // 2. Decidimos cómo ordenar
+                string direccionOrden = (orden == "Descendente") ? "DESC" : "ASC";
+
+                // 3. Armamos la consulta SQL combinando todo
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "SELECT * FROM Cliente WHERE " + columnaFiltro + " LIKE @Texto ORDER BY " + columnaFiltro + " " + direccionOrden;
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = conexion;
+
+                // Le agregamos los % para que busque coincidencias parciales (ej: si ponés "Flo", te trae "Flores")
+                cmd.Parameters.AddWithValue("@Texto", "%" + textoBusqueda + "%");
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
     }
 }
