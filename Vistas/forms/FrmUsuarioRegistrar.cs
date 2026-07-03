@@ -15,6 +15,17 @@ namespace Vistas.forms
         public FrmUsuarioRegistrar()
         {
             InitializeComponent();
+            txtNyAuser.KeyPress += txtNyAuser_KeyPress; // Suscribimos el evento a mano, sin tocar el Designer
+        }
+
+        private void txtNyAuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Dejamos pasar: letras (incluye tildes y ñ automático), espacios, y la tecla de borrar.
+            // Todo lo demás (números, símbolos) se cancela ANTES de llegar a la pantalla.
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
 
         private void frmCrearUsuario_Load(object sender, EventArgs e)
@@ -33,16 +44,23 @@ namespace Vistas.forms
         private void Load_Roles()
         {
             cmbRol.DataSource = UsuarioService.Listar_Roles();
-            
+
             cmbRol.DisplayMember = "Rol_descripcion";
-            
-            cmbRol.ValueMember = "Rol_codigo";      
+
+            cmbRol.ValueMember = "Rol_codigo";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (datosNoNull(txtNombreUser.Text, txtContraUser.Text, txtNyAuser.Text, cmbRol.SelectedValue, txtCorreoUser.Text))
             {
+                // El correo es opcional (datosNoNull no lo exige), pero SI escribió algo, tiene que tener @
+                if (!string.IsNullOrEmpty(txtCorreoUser.Text) && !txtCorreoUser.Text.Contains("@"))
+                {
+                    MessageBox.Show("El correo ingresado no es válido. Debe contener un @.");
+                    return;
+                }
+
                 if (!UsuarioService.nombreUsuarioExiste(txtNombreUser.Text))
                 {
                     UsuarioService.InsertarUsuario(txtNombreUser.Text, txtContraUser.Text, txtNyAuser.Text, Convert.ToInt32(cmbRol.SelectedValue), txtCorreoUser.Text);
@@ -55,19 +73,19 @@ namespace Vistas.forms
                 }
                 else
                 {
-                   MessageBox.Show("El nombre del usuario ya esta registrado! ingrese uno nuevo");
+                    MessageBox.Show("El nombre del usuario ya esta registrado! ingrese uno nuevo");
                 }
             }
-            else 
+            else
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios y seleccione un rol.");
             }
-        
+
         }
         private bool datosNoNull(string user, string contra, string nombreApellido, object rol, string correo)
         {
             if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(contra) || string.IsNullOrEmpty(nombreApellido)
-                || rol==null)
+                || rol == null)
             {
                 return false;
             }
