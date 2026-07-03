@@ -146,20 +146,22 @@ namespace ClaseBase.service
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
-        public static void ModificarUsuario(string nombreU, string contraU, string nyaU, int rol_id, string correo)
+        public static void ModificarUsuario(Usuario usu)
         {
-            Usuario usu = new Usuario(nombreU, contraU, nyaU, rol_id, correo);
-            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.OpticaG11ConnectionString);
             string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
             SqlConnection cnn = new SqlConnection(cadenaConexion);
-            
+
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "UPDATE Usuario SET Usu_contraseña = @pass, Usu_ApellidoNombre = @nombre, Rol_Codigo = @rol, Usu_Correo = @correo WHERE Usu_nombreUsuario = @User";
+            // 1. Agregamos Usu_NombreUsuario al SET y usamos Usu_ID en el WHERE
+            cmd.CommandText = "UPDATE Usuario SET Usu_NombreUsuario = @User, Usu_contraseña = @pass, Usu_ApellidoNombre = @nombre, Rol_Codigo = @rol, Usu_Correo = @correo WHERE Usu_ID = @id";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
+            // 2. Agregamos el parámetro del ID que sacamos del nuevo constructor
+            cmd.Parameters.AddWithValue("@id", usu.Usu_Id);
 
+            // 3. Los demás parámetros quedan igual
             cmd.Parameters.AddWithValue("@User", usu.Usu_NombreUsuario);
             cmd.Parameters.AddWithValue("@pass", usu.Usu_Contrasenia);
             cmd.Parameters.AddWithValue("@nombre", usu.Usu_ApellidoNombre);
@@ -168,6 +170,8 @@ namespace ClaseBase.service
 
             cnn.Open();
             cmd.ExecuteNonQuery();
+
+            // ¡Ojo! En tu recorte de código faltaba cerrar la conexión, acá la agregamos
             cnn.Close();
         }
         public static int IdRolUsuario(string nombreUsuario)
@@ -324,6 +328,34 @@ namespace ClaseBase.service
             }
 
             return existe;
+        }
+        public static int ObtenerIdUsuario(string nombreUsuarioOriginal)
+        {
+            int id = 0;
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection cnn = new SqlConnection(cadenaConexion);
+
+            SqlCommand cmd = new SqlCommand();
+            // Solo pedimos la columna Usu_ID
+            cmd.CommandText = "SELECT Usu_ID FROM Usuario WHERE Usu_NombreUsuario = @User";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@User", nombreUsuarioOriginal);
+
+            cnn.Open();
+
+            // ExecuteScalar trae la primera columna de la primera fila (justo nuestro ID)
+            object resultado = cmd.ExecuteScalar();
+
+            if (resultado != null)
+            {
+                id = Convert.ToInt32(resultado);
+            }
+
+            cnn.Close();
+
+            return id;
         }
     }
 }

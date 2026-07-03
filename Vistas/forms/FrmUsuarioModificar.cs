@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using ClaseBase.model;
 using ClaseBase.service;
 namespace Vistas.forms
 {
@@ -85,8 +86,20 @@ namespace Vistas.forms
                     DialogResult resultado = MessageBox.Show("Estas seguro de modificar a " + txtUsuarioMod.Text + "?", "confirmar", MessageBoxButtons.YesNo);
                     if (resultado == DialogResult.Yes)
                     {
-                        UsuarioService.ModificarUsuario(txtUsuarioMod.Text, txtConntraModf.Text, txtNombreAmodf.Text, rol_id, txtCorreoMdf.Text);
+                        int idObtenido = UsuarioService.ObtenerIdUsuario(txtBuscarUser.Text);
+                        Usuario usuarioModificado = new Usuario(
+                            idObtenido,
+                            txtUsuarioMod.Text,
+                            txtConntraModf.Text,
+                            txtNombreAmodf.Text,
+                            rol_id,
+                            txtCorreoMdf.Text
+                    );
+
+                        UsuarioService.ModificarUsuario(usuarioModificado);
+
                         load_Users();
+
                         txtUsuarioMod.Text = "";
                         txtConntraModf.Text = "";
                         txtNombreAmodf.Text = "";
