@@ -74,19 +74,25 @@ namespace Vistas.forms
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (datosNoNull(txtUsuarioMod.Text, txtConntraModf.Text, txtNombreAmodf.Text, cmbRol.SelectedValue, txtCorreoMdf.Text))
-            { 
-                 DialogResult resultado = MessageBox.Show("Estas seguro de modificar a " + txtUsuarioMod.Text + "?", "confirmar", MessageBoxButtons.YesNo);
-                 if (resultado == DialogResult.Yes)
-                 {
-                    int rol_id = Convert.ToInt32(cmbRol.SelectedValue);
-                    UsuarioService.ModificarUsuario(txtUsuarioMod.Text, txtConntraModf.Text, txtNombreAmodf.Text, rol_id, txtCorreoMdf.Text);
-                    load_Users();
-                    txtUsuarioMod.Text = "";
-                    txtConntraModf.Text = "";
-                    txtNombreAmodf.Text = "";
-                    txtCorreoMdf.Text = "";
-
-                 }
+            {
+                int rol_id = Convert.ToInt32(cmbRol.SelectedValue);
+                if (UsuarioService.EsUltimoAdministrador(txtUsuarioMod.Text) && rol_id != 1)
+                {
+                    MessageBox.Show("No puedo modificar el rol del usuario.\nTiene que haber al menos un administrador");
+                }
+                else 
+                {
+                    DialogResult resultado = MessageBox.Show("Estas seguro de modificar a " + txtUsuarioMod.Text + "?", "confirmar", MessageBoxButtons.YesNo);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        UsuarioService.ModificarUsuario(txtUsuarioMod.Text, txtConntraModf.Text, txtNombreAmodf.Text, rol_id, txtCorreoMdf.Text);
+                        load_Users();
+                        txtUsuarioMod.Text = "";
+                        txtConntraModf.Text = "";
+                        txtNombreAmodf.Text = "";
+                        txtCorreoMdf.Text = "";
+                    }
+                }
             }
             else
             {

@@ -300,5 +300,30 @@ namespace ClaseBase.service
                 return false;
             }
         }
+        public static bool UserExiste(string user)
+        {
+            bool existe = false;
+            string cadenaConexion = ClaseBase.service.Conexion.ObtenerCadena();
+            SqlConnection lus = new SqlConnection(cadenaConexion);
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "SELECT * FROM Usuario WHERE Usu_NombreUsuario = @usuario";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = lus;
+
+            cmd.Parameters.AddWithValue("@usuario", user);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                existe = true;
+            }
+
+            return existe;
+        }
     }
 }

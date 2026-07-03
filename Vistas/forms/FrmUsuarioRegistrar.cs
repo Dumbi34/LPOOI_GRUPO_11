@@ -43,13 +43,20 @@ namespace Vistas.forms
         {
             if (datosNoNull(txtNombreUser.Text, txtContraUser.Text, txtNyAuser.Text, cmbRol.SelectedValue, txtCorreoUser.Text))
             {
-                UsuarioService.InsertarUsuario(txtNombreUser.Text, txtContraUser.Text, txtNyAuser.Text, Convert.ToInt32(cmbRol.SelectedValue), txtCorreoUser.Text);
-                MessageBox.Show("Usuario registrado con éxito.");
-                frmCrearUsuario_Load(sender, e);
-                txtNombreUser.Text = "";
-                txtContraUser.Text = "";
-                txtNyAuser.Text = "";
-                txtCorreoUser.Text = "";
+                if (!UsuarioService.nombreUsuarioExiste(txtNombreUser.Text))
+                {
+                    UsuarioService.InsertarUsuario(txtNombreUser.Text, txtContraUser.Text, txtNyAuser.Text, Convert.ToInt32(cmbRol.SelectedValue), txtCorreoUser.Text);
+                    MessageBox.Show("Usuario registrado con éxito.");
+                    frmCrearUsuario_Load(sender, e);
+                    txtNombreUser.Text = "";
+                    txtContraUser.Text = "";
+                    txtNyAuser.Text = "";
+                    txtCorreoUser.Text = "";
+                }
+                else
+                {
+                   MessageBox.Show("El nombre del usuario ya esta registrado! ingrese uno nuevo");
+                }
             }
             else 
             {

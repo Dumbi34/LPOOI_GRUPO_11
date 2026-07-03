@@ -68,15 +68,23 @@ namespace Vistas.forms
         {
             if (cbCodigoProductos.SelectedIndex != -1 && verificarCantidad(txtCantidad.Text))
             {
-                decimal precioU = Convert.ToDecimal(cbCodigoProductos.SelectedValue);
-                string codigo = cbCodigoProductos.Text;
-                int cantidad = Convert.ToInt32(txtCantidad.Text);
-                decimal subtotal = precioU * cantidad;
-                calcularTotal(subtotal);
-                dtCarrito.Rows.Add(codigo, precioU, cantidad, subtotal);
+                if (ProductoService.codigoRegistrado(cbCodigoProductos.Text))
+                {
+                    decimal precioU = Convert.ToDecimal(cbCodigoProductos.SelectedValue);
+                    string codigo = cbCodigoProductos.Text;
+                    int cantidad = Convert.ToInt32(txtCantidad.Text);
+                    decimal subtotal = precioU * cantidad;
+                    calcularTotal(subtotal);
+                    dtCarrito.Rows.Add(codigo, precioU, cantidad, subtotal);
 
-                txtCantidad.Clear();
-                cbCodigoProductos.Focus();
+                    txtCantidad.Clear();
+                    cbCodigoProductos.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Codigo no registrado");
+                }
+               
             }
             else
             {
@@ -142,6 +150,5 @@ namespace Vistas.forms
                 cbClientes.SelectedValue = dniElegido;
             }
         }
-
     }
 }
