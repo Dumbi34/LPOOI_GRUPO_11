@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using ClaseBase.service;
 using Vistas.forms;
 
+
 namespace Vistas.Forms
 {
     public partial class frmListadoVentas : Form
@@ -25,7 +26,9 @@ namespace Vistas.Forms
         {
             if (cmbClientes.SelectedValue != null && cmbClientes.SelectedValue.ToString() != "System.Data.DataRowView")
             {
-                dgvVentas.DataSource = VentaService.Listar_VentasPorCliente(cmbClientes.SelectedValue.ToString());
+                System.Data.DataTable tablaVentas = VentaService.Listar_VentasPorCliente(cmbClientes.SelectedValue.ToString());
+                dgvVentas.DataSource = tablaVentas;
+                txtCantidad.Text = tablaVentas.Rows.Count.ToString();
             }
         }
 

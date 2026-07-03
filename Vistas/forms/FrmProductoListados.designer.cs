@@ -132,6 +132,7 @@
             this.txtCantidadVentas.Location = new System.Drawing.Point(171, 261);
             this.txtCantidadVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidadVentas.Name = "txtCantidadVentas";
+            this.txtCantidadVentas.ReadOnly = true;
             this.txtCantidadVentas.Size = new System.Drawing.Size(33, 22);
             this.txtCantidadVentas.TabIndex = 7;
             // 

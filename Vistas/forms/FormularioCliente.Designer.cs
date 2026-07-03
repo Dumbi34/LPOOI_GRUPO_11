@@ -55,7 +55,7 @@
             this.txtModDireccion = new System.Windows.Forms.TextBox();
             this.txtModCarnet = new System.Windows.Forms.TextBox();
             this.txtModCuit = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblModificar = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -70,6 +70,7 @@
             this.Apellido = new System.Windows.Forms.Label();
             this.Gestion = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.lblModificarTitulo = new System.Windows.Forms.Label();
             this.RegistroyGestion.SuspendLayout();
             this.Registrar_Cliente.SuspendLayout();
             this.btnModificar.SuspendLayout();
@@ -164,7 +165,7 @@
             // 
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellido.Location = new System.Drawing.Point(348, 94);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(274, 22);
             this.txtApellido.TabIndex = 7;
@@ -173,7 +174,7 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Location = new System.Drawing.Point(348, 139);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(274, 22);
             this.txtNombre.TabIndex = 8;
@@ -182,7 +183,7 @@
             // 
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDNI.Location = new System.Drawing.Point(348, 182);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(274, 22);
             this.txtDNI.TabIndex = 9;
@@ -191,7 +192,7 @@
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Location = new System.Drawing.Point(348, 222);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(274, 22);
             this.txtDireccion.TabIndex = 10;
@@ -200,7 +201,7 @@
             // 
             this.txtNroCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNroCliente.Location = new System.Drawing.Point(348, 262);
-            this.txtNroCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNroCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNroCliente.Name = "txtNroCliente";
             this.txtNroCliente.Size = new System.Drawing.Size(274, 22);
             this.txtNroCliente.TabIndex = 11;
@@ -209,7 +210,7 @@
             // 
             this.txtCuitOS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCuitOS.Location = new System.Drawing.Point(348, 309);
-            this.txtCuitOS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCuitOS.Margin = new System.Windows.Forms.Padding(4);
             this.txtCuitOS.Name = "txtCuitOS";
             this.txtCuitOS.Size = new System.Drawing.Size(274, 22);
             this.txtCuitOS.TabIndex = 12;
@@ -219,7 +220,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardar.Location = new System.Drawing.Point(143, 420);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(171, 39);
             this.btnGuardar.TabIndex = 13;
@@ -232,7 +233,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.DarkRed;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancelar.Location = new System.Drawing.Point(348, 420);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(169, 39);
             this.btnCancelar.TabIndex = 14;
@@ -245,7 +246,7 @@
             this.RegistroyGestion.Controls.Add(this.Registrar_Cliente);
             this.RegistroyGestion.Controls.Add(this.btnModificar);
             this.RegistroyGestion.Location = new System.Drawing.Point(16, 15);
-            this.RegistroyGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RegistroyGestion.Margin = new System.Windows.Forms.Padding(4);
             this.RegistroyGestion.Name = "RegistroyGestion";
             this.RegistroyGestion.SelectedIndex = 0;
             this.RegistroyGestion.Size = new System.Drawing.Size(708, 726);
@@ -270,9 +271,9 @@
             this.Registrar_Cliente.Controls.Add(this.txtCuitOS);
             this.Registrar_Cliente.Controls.Add(this.btnGuardar);
             this.Registrar_Cliente.Location = new System.Drawing.Point(4, 25);
-            this.Registrar_Cliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Registrar_Cliente.Margin = new System.Windows.Forms.Padding(4);
             this.Registrar_Cliente.Name = "Registrar_Cliente";
-            this.Registrar_Cliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Registrar_Cliente.Padding = new System.Windows.Forms.Padding(4);
             this.Registrar_Cliente.Size = new System.Drawing.Size(700, 697);
             this.Registrar_Cliente.TabIndex = 0;
             this.Registrar_Cliente.Text = "Registrar";
@@ -281,7 +282,7 @@
             // btnListarPorApellido
             // 
             this.btnListarPorApellido.Location = new System.Drawing.Point(232, 489);
-            this.btnListarPorApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnListarPorApellido.Margin = new System.Windows.Forms.Padding(4);
             this.btnListarPorApellido.Name = "btnListarPorApellido";
             this.btnListarPorApellido.Size = new System.Drawing.Size(177, 28);
             this.btnListarPorApellido.TabIndex = 15;
@@ -291,6 +292,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Controls.Add(this.lblModificarTitulo);
             this.btnModificar.Controls.Add(this.btnCambios);
             this.btnModificar.Controls.Add(this.txtModApellido);
             this.btnModificar.Controls.Add(this.txtModNombre);
@@ -298,7 +300,7 @@
             this.btnModificar.Controls.Add(this.txtModDireccion);
             this.btnModificar.Controls.Add(this.txtModCarnet);
             this.btnModificar.Controls.Add(this.txtModCuit);
-            this.btnModificar.Controls.Add(this.label8);
+            this.btnModificar.Controls.Add(this.lblModificar);
             this.btnModificar.Controls.Add(this.label9);
             this.btnModificar.Controls.Add(this.label10);
             this.btnModificar.Controls.Add(this.label11);
@@ -313,9 +315,9 @@
             this.btnModificar.Controls.Add(this.Apellido);
             this.btnModificar.Controls.Add(this.Gestion);
             this.btnModificar.Location = new System.Drawing.Point(4, 25);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Padding = new System.Windows.Forms.Padding(4);
             this.btnModificar.Size = new System.Drawing.Size(700, 697);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Gestionar";
@@ -327,7 +329,7 @@
             this.btnCambios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambios.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCambios.Location = new System.Drawing.Point(95, 622);
-            this.btnCambios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCambios.Margin = new System.Windows.Forms.Padding(4);
             this.btnCambios.Name = "btnCambios";
             this.btnCambios.Size = new System.Drawing.Size(216, 53);
             this.btnCambios.TabIndex = 21;
@@ -338,7 +340,7 @@
             // 
             this.txtModApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtModApellido.Location = new System.Drawing.Point(313, 343);
-            this.txtModApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtModApellido.Name = "txtModApellido";
             this.txtModApellido.Size = new System.Drawing.Size(274, 22);
             this.txtModApellido.TabIndex = 15;
@@ -347,7 +349,7 @@
             // 
             this.txtModNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtModNombre.Location = new System.Drawing.Point(313, 389);
-            this.txtModNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtModNombre.Name = "txtModNombre";
             this.txtModNombre.Size = new System.Drawing.Size(274, 22);
             this.txtModNombre.TabIndex = 16;
@@ -356,7 +358,7 @@
             // 
             this.txtModDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtModDni.Location = new System.Drawing.Point(313, 432);
-            this.txtModDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtModDni.Name = "txtModDni";
             this.txtModDni.Size = new System.Drawing.Size(274, 22);
             this.txtModDni.TabIndex = 17;
@@ -365,7 +367,7 @@
             // 
             this.txtModDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtModDireccion.Location = new System.Drawing.Point(313, 471);
-            this.txtModDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtModDireccion.Name = "txtModDireccion";
             this.txtModDireccion.Size = new System.Drawing.Size(274, 22);
             this.txtModDireccion.TabIndex = 18;
@@ -374,7 +376,7 @@
             // 
             this.txtModCarnet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtModCarnet.Location = new System.Drawing.Point(313, 512);
-            this.txtModCarnet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModCarnet.Margin = new System.Windows.Forms.Padding(4);
             this.txtModCarnet.Name = "txtModCarnet";
             this.txtModCarnet.Size = new System.Drawing.Size(274, 22);
             this.txtModCarnet.TabIndex = 19;
@@ -383,21 +385,21 @@
             // 
             this.txtModCuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtModCuit.Location = new System.Drawing.Point(313, 559);
-            this.txtModCuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModCuit.Margin = new System.Windows.Forms.Padding(4);
             this.txtModCuit.Name = "txtModCuit";
             this.txtModCuit.Size = new System.Drawing.Size(274, 22);
             this.txtModCuit.TabIndex = 20;
             // 
-            // label8
+            // lblModificar
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 346);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 23);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Apellido:";
+            this.lblModificar.AutoSize = true;
+            this.lblModificar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificar.Location = new System.Drawing.Point(28, 346);
+            this.lblModificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModificar.Name = "lblModificar";
+            this.lblModificar.Size = new System.Drawing.Size(95, 23);
+            this.lblModificar.TabIndex = 9;
+            this.lblModificar.Text = "Apellido:";
             // 
             // label9
             // 
@@ -472,7 +474,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEliminar.Location = new System.Drawing.Point(401, 622);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(187, 48);
             this.btnEliminar.TabIndex = 7;
@@ -485,7 +487,7 @@
             this.btnConsultar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnConsultar.Location = new System.Drawing.Point(484, 86);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(187, 48);
             this.btnConsultar.TabIndex = 6;
@@ -496,7 +498,7 @@
             // txtBuscaDni
             // 
             this.txtBuscaDni.Location = new System.Drawing.Point(204, 128);
-            this.txtBuscaDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscaDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscaDni.Name = "txtBuscaDni";
             this.txtBuscaDni.Size = new System.Drawing.Size(217, 22);
             this.txtBuscaDni.TabIndex = 5;
@@ -504,7 +506,7 @@
             // txtBuscaApe
             // 
             this.txtBuscaApe.Location = new System.Drawing.Point(204, 70);
-            this.txtBuscaApe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscaApe.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscaApe.Name = "txtBuscaApe";
             this.txtBuscaApe.Size = new System.Drawing.Size(217, 22);
             this.txtBuscaApe.TabIndex = 4;
@@ -552,13 +554,23 @@
             this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(749, 42);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(744, 699);
             this.dgvClientes.TabIndex = 0;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
+            // 
+            // lblModificarTitulo
+            // 
+            this.lblModificarTitulo.AutoSize = true;
+            this.lblModificarTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificarTitulo.Location = new System.Drawing.Point(28, 295);
+            this.lblModificarTitulo.Name = "lblModificarTitulo";
+            this.lblModificarTitulo.Size = new System.Drawing.Size(467, 20);
+            this.lblModificarTitulo.TabIndex = 22;
+            this.lblModificarTitulo.Text = "Puede seleccionar un nombre de la tabla para modificar";
             // 
             // FormularioCliente
             // 
@@ -568,7 +580,7 @@
             this.Controls.Add(this.RegistroyGestion);
             this.Controls.Add(this.dgvClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormularioCliente";
             this.Text = "FormularioCliente";
             this.RegistroyGestion.ResumeLayout(false);
@@ -617,12 +629,13 @@
         private System.Windows.Forms.TextBox txtModDireccion;
         private System.Windows.Forms.TextBox txtModCarnet;
         private System.Windows.Forms.TextBox txtModCuit;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblModificar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnListarPorApellido;
+        private System.Windows.Forms.Label lblModificarTitulo;
     }
 }
